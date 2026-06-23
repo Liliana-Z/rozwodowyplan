@@ -4,86 +4,153 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>RozwodowyPlan.pl</title>
+<title>RozwodowyPlan.pl | Rozwód bez chaosu</title>
+
+<meta name="description" content="Rozwód bez chaosu. Dowiedz się jakie kroki podjąć, jakie dokumenty przygotować i jak chronić siebie oraz swoje dzieci.">
 
 <style>
+
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+}
+
 body{
-    margin:0;
-    font-family:Arial,sans-serif;
-    color:#1f2937;
-    background:#ffffff;
+font-family:Arial, Helvetica, sans-serif;
+line-height:1.6;
+background:#f7f8fb;
+color:#222;
+}
+
+.container{
+max-width:1100px;
+margin:auto;
+padding:0 20px;
 }
 
 .hero{
-    background:#0f172a;
-    color:white;
-    text-align:center;
-    padding:80px 20px;
+background:#ffffff;
+padding:60px 20px;
+text-align:center;
 }
 
 .hero h1{
-    font-size:48px;
-    margin-bottom:20px;
+font-size:48px;
+margin-bottom:20px;
+color:#1f3557;
 }
 
 .hero p{
-    font-size:20px;
-    max-width:700px;
-    margin:auto;
+font-size:22px;
+max-width:850px;
+margin:auto;
+color:#555;
 }
 
-.button{
-    display:inline-block;
-    margin-top:30px;
-    background:#16a34a;
-    color:white;
-    padding:18px 35px;
-    text-decoration:none;
-    border-radius:8px;
-    font-weight:bold;
-}
-
-.section{
-    max-width:1000px;
-    margin:auto;
-    padding:70px 20px;
-}
-
-.section h2{
-    text-align:center;
-    margin-bottom:30px;
-}
-
-.cards{
-    display:flex;
-    flex-wrap:wrap;
-    gap:20px;
-    justify-content:center;
-}
-
-.card{
-    background:#f8fafc;
-    padding:25px;
-    border-radius:12px;
-    width:280px;
-    box-shadow:0 2px 8px rgba(0,0,0,0.08);
-}
-
-.card h3{
-    margin-top:0;
+.video{
+max-width:900px;
+margin:40px auto;
 }
 
 .cta{
-    background:#e2e8f0;
-    text-align:center;
-    padding:80px 20px;
+display:inline-block;
+background:#d62828;
+color:white;
+text-decoration:none;
+padding:20px 40px;
+border-radius:10px;
+font-size:24px;
+font-weight:bold;
+margin-top:30px;
+transition:0.3s;
+}
+
+.cta:hover{
+background:#b71c1c;
+}
+
+.section{
+padding:80px 20px;
+}
+
+.section-white{
+background:white;
+}
+
+.section-gray{
+background:#eef2f7;
+}
+
+h2{
+text-align:center;
+font-size:36px;
+margin-bottom:40px;
+color:#1f3557;
+}
+
+.grid{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+gap:25px;
+}
+
+.card{
+background:white;
+padding:30px;
+border-radius:12px;
+box-shadow:0 3px 12px rgba(0,0,0,0.08);
+}
+
+.card h3{
+margin-bottom:15px;
+}
+
+.center{
+text-align:center;
+}
+
+.faq{
+max-width:900px;
+margin:auto;
+}
+
+.faq-item{
+background:white;
+padding:25px;
+margin-bottom:15px;
+border-radius:10px;
 }
 
 footer{
-    text-align:center;
-    padding:30px;
-    color:#64748b;
+background:#1f3557;
+color:white;
+padding:40px 20px;
+text-align:center;
 }
+
+.footer-links{
+margin-bottom:20px;
+}
+
+.footer-links a{
+color:white;
+margin:0 12px;
+text-decoration:none;
+}
+
+.footer-links a:hover{
+text-decoration:underline;
+}
+
+.warning{
+background:#fff3cd;
+border:1px solid #ffe69c;
+padding:20px;
+border-radius:10px;
+margin-top:40px;
+}
+
 </style>
 </head>
 
@@ -91,96 +158,165 @@ footer{
 
 <section class="hero">
 
-<h1>Rozwód bez chaosu</h1>
+<div class="container">
+
+<h1>Rozwód bez chaosu i zgadywania</h1>
 
 <p>
-Przygotuj pozew rozwodowy i potrzebne dokumenty
-krok po kroku.
+Dostałaś pozew rozwodowy? Nie wiesz od czego zacząć?
+Sprawdź jakie kroki podjąć, jakie dokumenty przygotować
+i jak chronić siebie oraz swoje dzieci.
 </p>
 
-<a class="button" href="https://TWOJ-GENERATOR.PL">
-Przygotuj dokument
+<div class="video">
+
+<iframe
+width="100%"
+height="500"
+src="https://www.youtube.com/embed/TWOJ_FILM_ID"
+title="RozwodowyPlan.pl"
+frameborder="0"
+allowfullscreen>
+</iframe>
+
+</div>
+
+<a class="cta" href="https://jasnasprawa.pl">
+PRZYGOTUJ SWÓJ PLAN ROZWODU
 </a>
 
+</div>
+
 </section>
 
-<section class="section">
+<section class="section section-gray">
 
-<h2>Nie wiesz od czego zacząć?</h2>
+<div class="container">
 
-<p style="text-align:center;">
-Rozwód to stres i mnóstwo formalności.
-Nie musisz samodzielnie szukać wzorów,
-przepisów i dokumentów.
+<h2>Czy to jest dla Ciebie?</h2>
+
+<div class="grid">
+
+<div class="card">
+<h3>📄 Otrzymałaś pozew</h3>
+<p>Nie wiesz jak odpowiedzieć i boisz się popełnić błąd.</p>
+</div>
+
+<div class="card">
+<h3>👶 Martwisz się o dzieci</h3>
+<p>Chcesz zadbać o ich bezpieczeństwo i przyszłość.</p>
+</div>
+
+<div class="card">
+<h3>⚖️ Czeka Cię rozwód</h3>
+<p>Szukasz jasnego planu działania krok po kroku.</p>
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+<section class="section section-white">
+
+<div class="container">
+
+<h2>Co otrzymasz?</h2>
+
+<div class="grid">
+
+<div class="card">
+<h3>✅ Plan działania</h3>
+<p>Dowiesz się co zrobić najpierw, a co później.</p>
+</div>
+
+<div class="card">
+<h3>✅ Wskazówki dotyczące dokumentów</h3>
+<p>Sprawdzisz jakie dokumenty mogą być potrzebne.</p>
+</div>
+
+<div class="card">
+<h3>✅ Większy spokój</h3>
+<p>Podejmiesz decyzje świadomie zamiast działać pod wpływem stresu.</p>
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+<section class="section section-gray">
+
+<div class="container">
+
+<h2>Najczęstsze pytania</h2>
+
+<div class="faq">
+
+<div class="faq-item">
+<strong>Czy serwis zastępuje prawnika?</strong><br>
+Nie. Pomaga uporządkować sytuację i przygotować plan działania.
+</div>
+
+<div class="faq-item">
+<strong>Czy mogę korzystać anonimowo?</strong><br>
+Tak.
+</div>
+
+<div class="faq-item">
+<strong>Czy rozwód z dziećmi wymaga dodatkowych dokumentów?</strong><br>
+To zależy od sytuacji. Narzędzie pomaga określić możliwe kroki.
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+<section class="section section-white">
+
+<div class="container center">
+
+<h2>Nie odkładaj ważnych decyzji</h2>
+
+<p style="font-size:22px;max-width:800px;margin:auto;">
+Pierwsze decyzje podejmowane podczas rozwodu często mają wpływ
+na dalszy przebieg sprawy i sytuację dzieci.
 </p>
 
-</section>
-
-<section class="section">
-
-<h2>Co możesz przygotować?</h2>
-
-<div class="cards">
-
-<div class="card">
-<h3>Pozew rozwodowy</h3>
-<p>Przygotowany krok po kroku.</p>
+<div class="warning">
+Im wcześniej przygotujesz plan działania,
+tym większą masz kontrolę nad sytuacją.
 </div>
 
-<div class="card">
-<h3>Alimenty</h3>
-<p>Wnioski dotyczące alimentów.</p>
-</div>
-
-<div class="card">
-<h3>Opieka nad dziećmi</h3>
-<p>Dokumenty związane z dziećmi.</p>
-</div>
-
-</div>
-
-</section>
-
-<section class="section">
-
-<h2>Jak to działa?</h2>
-
-<div class="cards">
-
-<div class="card">
-<h3>1. Odpowiedz na pytania</h3>
-</div>
-
-<div class="card">
-<h3>2. Uzupełnij dane</h3>
-</div>
-
-<div class="card">
-<h3>3. Pobierz PDF</h3>
-</div>
-
-</div>
-
-</section>
-
-<section class="cta">
-
-<h2>Pierwszy krok jest najtrudniejszy</h2>
-
-<p>
-Nie musisz wiedzieć wszystkiego.
-Po prostu zacznij.
-</p>
-
-<a class="button" href="https://TWOJ-GENERATOR.PL">
-Przejdź do generatora
+<a class="cta" href="https://jasnasprawa.pl">
+STWÓRZ PLAN TERAZ
 </a>
+
+</div>
 
 </section>
 
 <footer>
 
-<p>© RozwodowyPlan.pl</p>
+<div class="footer-links">
+<a href="polityka-prywatnosci.html">Polityka Prywatności</a>
+<a href="regulamin.html">Regulamin</a>
+<a href="cookies.html">Polityka Cookies</a>
+<a href="kontakt.html">Kontakt</a>
+</div>
+
+<p>
+© 2026 RozwodowyPlan.pl
+</p>
+
+<p style="margin-top:10px;font-size:14px;">
+Informacje zamieszczone w serwisie mają charakter informacyjny
+i nie stanowią porady prawnej.
+</p>
 
 </footer>
 
