@@ -4,319 +4,801 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>RozwodowyPlan.pl | Rozwód bez chaosu</title>
+<title>RozwodowyPlan.pl | Generator pism do sprawy rozwodowej</title>
 
-<meta name="description" content="Rozwód bez chaosu. Dowiedz się jakie kroki podjąć, jakie dokumenty przygotować i jak chronić siebie oraz swoje dzieci.">
+<meta name="description" content="Odpowiedz na kilka prostych pytań i otrzymaj indywidualny projekt pisma do sprawy rozwodowej, alimentów, dzieci, kontaktów lub zabezpieczenia.">
 
 <style>
-
 *{
-margin:0;
-padding:0;
-box-sizing:border-box;
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
 }
 
 body{
-font-family:Arial, Helvetica, sans-serif;
-line-height:1.6;
-background:#f7f8fb;
-color:#222;
+    font-family: Arial, Helvetica, sans-serif;
+    background:#f7f8fb;
+    color:#1f2933;
+    line-height:1.7;
 }
 
 .container{
-max-width:1100px;
-margin:auto;
-padding:0 20px;
+    max-width:1120px;
+    margin:0 auto;
+    padding:0 22px;
+}
+
+.header{
+    background:#ffffff;
+    border-bottom:1px solid #e5e7eb;
+    padding:18px 0;
+    position:sticky;
+    top:0;
+    z-index:20;
+}
+
+.header-inner{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    gap:20px;
+}
+
+.logo{
+    font-size:25px;
+    font-weight:800;
+    color:#1d3557;
+    text-decoration:none;
+}
+
+.logo span{
+    color:#d62828;
+}
+
+.header-button{
+    background:#d62828;
+    color:#ffffff;
+    padding:12px 22px;
+    border-radius:9px;
+    text-decoration:none;
+    font-weight:800;
 }
 
 .hero{
-background:#ffffff;
-padding:60px 20px;
-text-align:center;
+    background:linear-gradient(135deg,#ffffff 0%,#edf3f8 100%);
+    padding:80px 0 70px;
 }
 
-.hero h1{
-font-size:48px;
-margin-bottom:20px;
-color:#1f3557;
+.hero-grid{
+    display:grid;
+    grid-template-columns:1.08fr .92fr;
+    gap:46px;
+    align-items:center;
 }
 
-.hero p{
-font-size:22px;
-max-width:850px;
-margin:auto;
-color:#555;
+.badge{
+    display:inline-block;
+    background:#fff0f0;
+    color:#b71c1c;
+    padding:8px 15px;
+    border-radius:999px;
+    font-size:15px;
+    font-weight:800;
+    margin-bottom:22px;
 }
 
-.video{
-max-width:900px;
-margin:40px auto;
+h1{
+    font-size:50px;
+    line-height:1.12;
+    color:#1d3557;
+    margin-bottom:24px;
+}
+
+.hero-text{
+    font-size:22px;
+    color:#4b5563;
+    margin-bottom:30px;
 }
 
 .cta{
-display:inline-block;
-background:#d62828;
-color:white;
-text-decoration:none;
-padding:20px 40px;
-border-radius:10px;
-font-size:24px;
-font-weight:bold;
-margin-top:30px;
-transition:0.3s;
+    display:inline-block;
+    background:#d62828;
+    color:#ffffff;
+    padding:20px 34px;
+    border-radius:11px;
+    text-decoration:none;
+    font-size:22px;
+    font-weight:900;
+    box-shadow:0 12px 28px rgba(214,40,40,.25);
 }
 
 .cta:hover{
-background:#b71c1c;
+    background:#b71c1c;
+}
+
+.note{
+    margin-top:14px;
+    font-size:14px;
+    color:#6b7280;
+}
+
+.video-card{
+    background:#ffffff;
+    padding:22px;
+    border-radius:24px;
+    box-shadow:0 18px 45px rgba(0,0,0,.12);
+}
+
+.video-placeholder{
+    aspect-ratio:16/9;
+    border-radius:18px;
+    background:linear-gradient(135deg,#1d3557,#0f172a);
+    color:#ffffff;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    text-align:center;
+    padding:30px;
+}
+
+.video-placeholder strong{
+    display:block;
+    font-size:28px;
+    margin-bottom:10px;
+}
+
+.video-placeholder span{
+    font-size:16px;
+    opacity:.86;
 }
 
 .section{
-padding:80px 20px;
+    padding:80px 0;
 }
 
 .section-white{
-background:white;
+    background:#ffffff;
 }
 
-.section-gray{
-background:#eef2f7;
+.section-light{
+    background:#f7f8fb;
 }
 
 h2{
-text-align:center;
-font-size:36px;
-margin-bottom:40px;
-color:#1f3557;
+    font-size:38px;
+    color:#1d3557;
+    text-align:center;
+    margin-bottom:22px;
 }
 
-.grid{
-display:grid;
-grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
-gap:25px;
+.section-intro{
+    max-width:840px;
+    margin:0 auto 46px;
+    text-align:center;
+    font-size:20px;
+    color:#4b5563;
 }
 
-.card{
-background:white;
-padding:30px;
-border-radius:12px;
-box-shadow:0 3px 12px rgba(0,0,0,0.08);
+.problem-box{
+    max-width:920px;
+    margin:0 auto;
+    background:#ffffff;
+    border-radius:20px;
+    padding:38px;
+    box-shadow:0 8px 25px rgba(0,0,0,.08);
 }
 
-.card h3{
-margin-bottom:15px;
+.problem-box p{
+    font-size:20px;
+    margin-bottom:17px;
 }
 
-.center{
-text-align:center;
-}
-
-.faq{
-max-width:900px;
-margin:auto;
-}
-
-.faq-item{
-background:white;
-padding:25px;
-margin-bottom:15px;
-border-radius:10px;
-}
-
-footer{
-background:#1f3557;
-color:white;
-padding:40px 20px;
-text-align:center;
-}
-
-.footer-links{
-margin-bottom:20px;
-}
-
-.footer-links a{
-color:white;
-margin:0 12px;
-text-decoration:none;
-}
-
-.footer-links a:hover{
-text-decoration:underline;
+.problem-box p:last-child{
+    margin-bottom:0;
 }
 
 .warning{
-background:#fff3cd;
-border:1px solid #ffe69c;
-padding:20px;
-border-radius:10px;
-margin-top:40px;
+    max-width:920px;
+    margin:32px auto 0;
+    background:#fff7ed;
+    border:1px solid #fed7aa;
+    color:#7c2d12;
+    border-radius:18px;
+    padding:26px;
+    font-size:18px;
 }
 
+.grid{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
+    gap:24px;
+}
+
+.card{
+    background:#ffffff;
+    border-radius:18px;
+    padding:30px;
+    box-shadow:0 6px 20px rgba(0,0,0,.08);
+}
+
+.card h3{
+    color:#1d3557;
+    font-size:22px;
+    margin-bottom:12px;
+}
+
+.card p{
+    color:#4b5563;
+}
+
+.list{
+    max-width:940px;
+    margin:0 auto;
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(300px,1fr));
+    gap:14px;
+}
+
+.list-item{
+    background:#ffffff;
+    padding:18px 20px;
+    border-radius:13px;
+    box-shadow:0 4px 14px rgba(0,0,0,.06);
+}
+
+.list-item strong{
+    color:#d62828;
+}
+
+.steps{
+    max-width:920px;
+    margin:0 auto;
+    counter-reset:step;
+}
+
+.step{
+    background:#ffffff;
+    border-radius:18px;
+    padding:28px 28px 28px 36px;
+    margin-bottom:18px;
+    box-shadow:0 5px 18px rgba(0,0,0,.07);
+    position:relative;
+}
+
+.step:before{
+    counter-increment:step;
+    content:counter(step);
+    position:absolute;
+    left:-15px;
+    top:24px;
+    background:#d62828;
+    color:#ffffff;
+    width:40px;
+    height:40px;
+    border-radius:50%;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    font-weight:900;
+}
+
+.step h3{
+    color:#1d3557;
+    margin-bottom:8px;
+}
+
+.split{
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    gap:28px;
+}
+
+.panel{
+    background:#ffffff;
+    border-radius:18px;
+    padding:34px;
+    box-shadow:0 6px 22px rgba(0,0,0,.08);
+}
+
+.panel h3{
+    font-size:26px;
+    margin-bottom:18px;
+    color:#1d3557;
+}
+
+.panel ul{
+    padding-left:22px;
+}
+
+.panel li{
+    margin-bottom:12px;
+}
+
+.cta-section{
+    background:#1d3557;
+    color:#ffffff;
+    border-radius:26px;
+    padding:48px;
+    max-width:900px;
+    margin:0 auto;
+    text-align:center;
+    box-shadow:0 18px 45px rgba(29,53,87,.25);
+}
+
+.cta-section h2{
+    color:#ffffff;
+}
+
+.cta-section p{
+    font-size:20px;
+    margin-bottom:28px;
+    color:#e5e7eb;
+}
+
+.cta-section .cta{
+    background:#ffffff;
+    color:#d62828;
+}
+
+.cta-section .cta:hover{
+    background:#f3f4f6;
+}
+
+.faq{
+    max-width:920px;
+    margin:0 auto;
+}
+
+.faq-item{
+    background:#ffffff;
+    border-radius:16px;
+    padding:26px;
+    margin-bottom:16px;
+    box-shadow:0 4px 16px rgba(0,0,0,.06);
+}
+
+.faq-item h3{
+    color:#1d3557;
+    margin-bottom:8px;
+}
+
+.footer{
+    background:#0f172a;
+    color:#ffffff;
+    text-align:center;
+    padding:45px 20px;
+}
+
+.footer-links{
+    margin-bottom:18px;
+}
+
+.footer-links a{
+    color:#ffffff;
+    margin:0 10px;
+    text-decoration:none;
+    font-size:15px;
+}
+
+.footer-links a:hover{
+    text-decoration:underline;
+}
+
+.footer p{
+    max-width:920px;
+    margin:10px auto;
+    color:#cbd5e1;
+    font-size:14px;
+}
+
+@media(max-width:850px){
+    .hero-grid,
+    .split{
+        grid-template-columns:1fr;
+    }
+
+    h1{
+        font-size:38px;
+    }
+
+    h2{
+        font-size:30px;
+    }
+
+    .hero{
+        padding:55px 0;
+    }
+
+    .header-inner{
+        flex-direction:column;
+    }
+
+    .cta{
+        font-size:18px;
+        padding:17px 24px;
+    }
+
+    .problem-box,
+    .cta-section{
+        padding:28px 22px;
+    }
+}
 </style>
+
 </head>
 
 <body>
 
+<header class="header">
+    <div class="container header-inner">
+        <a href="#" class="logo">Rozwodowy<span>Plan</span>.pl</a>
+        <a href="https://jasnasprawa.pl" class="header-button">Przygotuj pismo</a>
+    </div>
+</header>
+
 <section class="hero">
+    <div class="container hero-grid">
 
-<div class="container">
+        <div>
+            <div class="badge">Generator indywidualnych pism rozwodowych</div>
 
-<h1>Rozwód bez chaosu i zgadywania</h1>
+            <h1>Potrzebujesz pisma do sprawy rozwodowej, ale nie wiesz, jak je napisać?</h1>
 
-<p>
-Dostałaś pozew rozwodowy? Nie wiesz od czego zacząć?
-Sprawdź jakie kroki podjąć, jakie dokumenty przygotować
-i jak chronić siebie oraz swoje dzieci.
-</p>
+            <p class="hero-text">
+                Odpowiedz na kilka prostych pytań, a generator przygotuje dla Ciebie
+                indywidualny projekt pisma dopasowany do Twojej sytuacji — w sprawach dotyczących
+                rozwodu, dzieci, alimentów, kontaktów lub zabezpieczenia.
+            </p>
 
-<div class="video">
+            <a class="cta" href="https://jasnasprawa.pl">
+                PRZYGOTUJ MOJE PISMO
+            </a>
 
-<iframe
-width="100%"
-height="500"
-src="https://www.youtube.com/embed/TWOJ_FILM_ID"
-title="RozwodowyPlan.pl"
-frameborder="0"
-allowfullscreen>
-</iframe>
+            <div class="note">
+                Nie zaczynasz od pustej kartki. Dostajesz uporządkowany projekt pisma jako punkt wyjścia.
+            </div>
+        </div>
 
-</div>
+        <div class="video-card">
+            <div class="video-placeholder">
+                <div>
+                    <strong>Miejsce na film</strong>
+                    <span>Tutaj wstawisz film reklamowy, gdy będzie gotowy.</span>
+                </div>
+            </div>
+        </div>
 
-<a class="cta" href="https://jasnasprawa.pl">
-PRZYGOTUJ SWÓJ PLAN ROZWODU
-</a>
-
-</div>
-
-</section>
-
-<section class="section section-gray">
-
-<div class="container">
-
-<h2>Czy to jest dla Ciebie?</h2>
-
-<div class="grid">
-
-<div class="card">
-<h3>📄 Otrzymałaś pozew</h3>
-<p>Nie wiesz jak odpowiedzieć i boisz się popełnić błąd.</p>
-</div>
-
-<div class="card">
-<h3>👶 Martwisz się o dzieci</h3>
-<p>Chcesz zadbać o ich bezpieczeństwo i przyszłość.</p>
-</div>
-
-<div class="card">
-<h3>⚖️ Czeka Cię rozwód</h3>
-<p>Szukasz jasnego planu działania krok po kroku.</p>
-</div>
-
-</div>
-
-</div>
-
+    </div>
 </section>
 
 <section class="section section-white">
+    <div class="container">
 
-<div class="container">
+        <h2>Jeśli właśnie jesteś w sytuacji, w której…</h2>
 
-<h2>Co otrzymasz?</h2>
+        <div class="problem-box">
+            <p>Dostałaś pozew rozwodowy i nie wiesz, jak odpowiedzieć.</p>
+            <p>Chcesz złożyć własne pismo, ale boisz się, że coś pominiesz.</p>
+            <p>Sprawa dotyczy dzieci, alimentów, kontaktów, miejsca pobytu dziecka albo zabezpieczenia.</p>
+            <p>Czujesz chaos, stres i presję czasu.</p>
+            <p>Masz dużo myśli i argumentów, ale nie wiesz, jak ułożyć je w spokojny, czytelny dokument.</p>
+            <p>Nie chcesz sklejać przypadkowych wzorów z internetu, które nie pasują do Twojej sytuacji.</p>
+        </div>
 
-<div class="grid">
+        <div class="warning">
+            Sprawy rodzinne dotykają nie tylko dokumentów, ale też emocji, dzieci, bezpieczeństwa i przyszłości.
+            Dlatego pismo powinno być spokojne, uporządkowane i możliwie dobrze dopasowane do sytuacji.
+        </div>
 
-<div class="card">
-<h3>✅ Plan działania</h3>
-<p>Dowiesz się co zrobić najpierw, a co później.</p>
-</div>
-
-<div class="card">
-<h3>✅ Wskazówki dotyczące dokumentów</h3>
-<p>Sprawdzisz jakie dokumenty mogą być potrzebne.</p>
-</div>
-
-<div class="card">
-<h3>✅ Większy spokój</h3>
-<p>Podejmiesz decyzje świadomie zamiast działać pod wpływem stresu.</p>
-</div>
-
-</div>
-
-</div>
-
+    </div>
 </section>
 
-<section class="section section-gray">
+<section class="section section-light">
+    <div class="container">
 
-<div class="container">
+        <h2>RozwodowyPlan.pl pomaga przejść od chaosu do konkretnego dokumentu</h2>
 
-<h2>Najczęstsze pytania</h2>
+        <p class="section-intro">
+            Nie musisz znać języka prawniczego. Nie musisz zaczynać od pustej kartki.
+            Generator prowadzi Cię przez pytania, porządkuje Twoje odpowiedzi i tworzy projekt pisma.
+        </p>
 
-<div class="faq">
+        <div class="grid">
 
-<div class="faq-item">
-<strong>Czy serwis zastępuje prawnika?</strong><br>
-Nie. Pomaga uporządkować sytuację i przygotować plan działania.
-</div>
+            <div class="card">
+                <h3>Odpowiadasz na pytania</h3>
+                <p>Opisujesz swoją sytuację prostym językiem: czego dotyczy sprawa, czego potrzebujesz i co chcesz zawrzeć w piśmie.</p>
+            </div>
 
-<div class="faq-item">
-<strong>Czy mogę korzystać anonimowo?</strong><br>
-Tak.
-</div>
+            <div class="card">
+                <h3>System układa treść</h3>
+                <p>Generator porządkuje informacje i przygotowuje dokument w logicznej, czytelnej formie.</p>
+            </div>
 
-<div class="faq-item">
-<strong>Czy rozwód z dziećmi wymaga dodatkowych dokumentów?</strong><br>
-To zależy od sytuacji. Narzędzie pomaga określić możliwe kroki.
-</div>
+            <div class="card">
+                <h3>Otrzymujesz projekt pisma</h3>
+                <p>Dostajesz indywidualny projekt pisma gotowy do pobrania, zapisania, edycji i dalszej weryfikacji.</p>
+            </div>
 
-</div>
+        </div>
 
-</div>
-
+    </div>
 </section>
 
 <section class="section section-white">
+    <div class="container">
 
-<div class="container center">
+        <h2>Co możesz otrzymać?</h2>
 
-<h2>Nie odkładaj ważnych decyzji</h2>
+        <p class="section-intro">
+            W zależności od sytuacji generator może pomóc przygotować projekt pisma dotyczący różnych obszarów sprawy rodzinnej.
+        </p>
 
-<p style="font-size:22px;max-width:800px;margin:auto;">
-Pierwsze decyzje podejmowane podczas rozwodu często mają wpływ
-na dalszy przebieg sprawy i sytuację dzieci.
-</p>
+        <div class="list">
+            <div class="list-item"><strong>✓</strong> odpowiedź na pozew rozwodowy</div>
+            <div class="list-item"><strong>✓</strong> projekt pozwu rozwodowego</div>
+            <div class="list-item"><strong>✓</strong> wniosek o zabezpieczenie alimentów</div>
+            <div class="list-item"><strong>✓</strong> pismo dotyczące kontaktów z dzieckiem</div>
+            <div class="list-item"><strong>✓</strong> pismo w sprawie miejsca pobytu dziecka</div>
+            <div class="list-item"><strong>✓</strong> pismo porządkujące Twoje stanowisko</div>
+            <div class="list-item"><strong>✓</strong> listę argumentów, które warto rozważyć</div>
+            <div class="list-item"><strong>✓</strong> dokument, który możesz skonsultować z prawnikiem</div>
+        </div>
 
-<div class="warning">
-Im wcześniej przygotujesz plan działania,
-tym większą masz kontrolę nad sytuacją.
-</div>
-
-<a class="cta" href="https://jasnasprawa.pl">
-STWÓRZ PLAN TERAZ
-</a>
-
-</div>
-
+    </div>
 </section>
 
-<footer>
+<section class="section section-light">
+    <div class="container">
 
-<div class="footer-links">
-<a href="polityka-prywatnosci.html">Polityka Prywatności</a>
-<a href="regulamin.html">Regulamin</a>
-<a href="cookies.html">Polityka Cookies</a>
-<a href="kontakt.html">Kontakt</a>
-</div>
+        <h2>Co zyskujesz?</h2>
 
-<p>
-© 2026 RozwodowyPlan.pl
-</p>
+        <div class="grid">
 
-<p style="margin-top:10px;font-size:14px;">
-Informacje zamieszczone w serwisie mają charakter informacyjny
-i nie stanowią porady prawnej.
-</p>
+            <div class="card">
+                <h3>Nie zaczynasz od pustej kartki</h3>
+                <p>Zamiast godzinami zastanawiać się, jak zacząć, przechodzisz przez konkretne pytania.</p>
+            </div>
+
+            <div class="card">
+                <h3>Porządkujesz sytuację</h3>
+                <p>Widzisz, jakie informacje są ważne i co warto uwzględnić w piśmie.</p>
+            </div>
+
+            <div class="card">
+                <h3>Działasz spokojniej</h3>
+                <p>Nie piszesz wszystkiego w panice. Otrzymujesz strukturę, która pomaga zebrać myśli.</p>
+            </div>
+
+            <div class="card">
+                <h3>Masz projekt do dalszej pracy</h3>
+                <p>Możesz go przeczytać, uzupełnić, edytować albo pokazać prawnikowi.</p>
+            </div>
+
+            <div class="card">
+                <h3>Unikasz przypadkowych wzorów</h3>
+                <p>Dokument powstaje na podstawie Twoich odpowiedzi, a nie z ogólnego szablonu.</p>
+            </div>
+
+            <div class="card">
+                <h3>Robisz pierwszy konkretny krok</h3>
+                <p>Nawet jeśli sytuacja jest trudna, możesz zacząć od uporządkowanego pisma.</p>
+            </div>
+
+        </div>
+
+    </div>
+</section>
+
+<section class="section section-white">
+    <div class="container">
+
+        <h2>To nie jest kolejny ogólny wzór z internetu</h2>
+
+        <p class="section-intro">
+            Zwykły wzór nie zna Twojej sytuacji. Nie wie, czy masz dzieci. Nie wie, czy chodzi o alimenty.
+            Nie wie, czy druga strona ukrywa dochody, czy potrzebujesz zabezpieczenia, ani czego najbardziej się obawiasz.
+        </p>
+
+        <div class="problem-box">
+            <p>
+                Dlatego RozwodowyPlan.pl działa inaczej: najpierw pyta, potem układa projekt pisma pod Twoje odpowiedzi.
+            </p>
+            <p>
+                Dzięki temu otrzymujesz dokument, który od początku jest bliżej Twojej realnej sytuacji niż przypadkowy wzór pobrany z internetu.
+            </p>
+        </div>
+
+    </div>
+</section>
+
+<section class="section section-light">
+    <div class="container">
+
+        <h2>Jak to działa krok po kroku?</h2>
+
+        <div class="steps">
+
+            <div class="step">
+                <h3>Wybierasz rodzaj pisma</h3>
+                <p>Określasz, czy chodzi o rozwód, odpowiedź na pozew, alimenty, kontakty, dzieci lub zabezpieczenie.</p>
+            </div>
+
+            <div class="step">
+                <h3>Odpowiadasz na proste pytania</h3>
+                <p>Generator prowadzi Cię przez najważniejsze informacje, bez skomplikowanego języka.</p>
+            </div>
+
+            <div class="step">
+                <h3>Otrzymujesz indywidualny projekt pisma</h3>
+                <p>Dokument powstaje na podstawie Twoich odpowiedzi i jest gotowy do pobrania.</p>
+            </div>
+
+            <div class="step">
+                <h3>Sprawdzasz i decydujesz co dalej</h3>
+                <p>Możesz dokument przeczytać, edytować, uzupełnić albo skonsultować z prawnikiem.</p>
+            </div>
+
+        </div>
+
+    </div>
+</section>
+
+<section class="section section-white">
+    <div class="container">
+
+        <h2>Dla kogo jest RozwodowyPlan.pl?</h2>
+
+        <div class="split">
+
+            <div class="panel">
+                <h3>To jest dla Ciebie, jeśli:</h3>
+                <ul>
+                    <li>potrzebujesz projektu pisma do sprawy rozwodowej,</li>
+                    <li>nie wiesz, jak zacząć,</li>
+                    <li>boisz się pominąć coś ważnego,</li>
+                    <li>chcesz szybciej uporządkować sytuację,</li>
+                    <li>chcesz przygotować się przed rozmową z prawnikiem,</li>
+                    <li>potrzebujesz spokojnego prowadzenia krok po kroku.</li>
+                </ul>
+            </div>
+
+            <div class="panel">
+                <h3>To nie jest dla Ciebie, jeśli:</h3>
+                <ul>
+                    <li>oczekujesz pełnego zastępstwa procesowego,</li>
+                    <li>szukasz indywidualnej porady prawnej adwokata,</li>
+                    <li>nie chcesz odpowiadać na pytania dotyczące swojej sytuacji,</li>
+                    <li>potrzebujesz natychmiastowej interwencji w bardzo pilnej sprawie.</li>
+                </ul>
+            </div>
+
+        </div>
+
+    </div>
+</section>
+
+<section class="section section-light">
+    <div class="container">
+
+        <div class="cta-section">
+            <h2>Zacznij od pierwszego pisma</h2>
+
+            <p>
+                Rozwód i sprawy rodzinne są wystarczająco trudne.
+                Nie musisz dodatkowo siedzieć godzinami nad pustą kartką.
+            </p>
+
+            <a class="cta" href="https://jasnasprawa.pl">
+                PRZYGOTUJ MOJE PISMO
+            </a>
+        </div>
+
+    </div>
+</section>
+
+<section class="section section-white">
+    <div class="container">
+
+        <h2>Czy rozpoznajesz siebie?</h2>
+
+        <p class="section-intro">
+            Być może od kilku dni czytasz sprzeczne informacje, zapisujesz linki,
+            pytasz znajomych i wciąż masz wrażenie, że nie wiesz, co konkretnie napisać.
+        </p>
+
+        <div class="problem-box">
+            <p>Być może boisz się, że druga strona jest lepiej przygotowana.</p>
+            <p>Być może odkładasz działanie, bo samo otwarcie dokumentu powoduje napięcie.</p>
+            <p>Być może masz w głowie dużo argumentów, ale nie wiesz, jak ułożyć je w spokojne pismo.</p>
+            <p>Jeśli tak jest, ten generator powstał po to, żeby pomóc Ci przejść od chaosu do pierwszego konkretnego dokumentu.</p>
+        </div>
+
+        <div style="text-align:center;margin-top:35px;">
+            <a class="cta" href="https://jasnasprawa.pl">
+                NIE CHCĘ ZACZYNAĆ OD PUSTEJ KARTKI
+            </a>
+        </div>
+
+    </div>
+</section>
+
+<section class="section section-light">
+    <div class="container">
+
+        <h2>Najczęstsze pytania</h2>
+
+        <div class="faq">
+
+            <div class="faq-item">
+                <h3>Czy to jest porada prawna?</h3>
+                <p>Nie. Generator pomaga przygotować projekt pisma na podstawie Twoich odpowiedzi. Nie zastępuje indywidualnej porady prawnej.</p>
+            </div>
+
+            <div class="faq-item">
+                <h3>Czy mogę od razu złożyć wygenerowane pismo?</h3>
+                <p>Dokument otrzymujesz jako projekt do wykorzystania i dalszej weryfikacji. W ważnych, spornych lub pilnych sprawach warto skonsultować go z profesjonalnym pełnomocnikiem.</p>
+            </div>
+
+            <div class="faq-item">
+                <h3>Co otrzymam po wypełnieniu pytań?</h3>
+                <p>Otrzymasz projekt pisma dopasowany do informacji, które podasz w generatorze.</p>
+            </div>
+
+            <div class="faq-item">
+                <h3>Czy muszę znać przepisy?</h3>
+                <p>Nie. Generator prowadzi Cię przez pytania prostym językiem.</p>
+            </div>
+
+            <div class="faq-item">
+                <h3>Czy mogę poprawić pismo po wygenerowaniu?</h3>
+                <p>Tak. Projekt możesz przeczytać, uzupełnić, edytować lub potraktować jako bazę do dalszej pracy.</p>
+            </div>
+
+            <div class="faq-item">
+                <h3>Czy moje dane są bezpieczne?</h3>
+                <p>Szczegóły przetwarzania danych znajdziesz w Polityce prywatności serwisu.</p>
+            </div>
+
+        </div>
+
+    </div>
+</section>
+
+<section class="section section-white">
+    <div class="container">
+
+        <div class="cta-section">
+            <h2>Przygotuj swoje pismo teraz</h2>
+
+            <p>
+                Odpowiedz na pytania i pobierz indywidualny projekt pisma do sprawy rozwodowej.
+            </p>
+
+            <a class="cta" href="https://jasnasprawa.pl">
+                PRZEJDŹ DO GENERATORA
+            </a>
+        </div>
+
+    </div>
+</section>
+
+<footer class="footer">
+
+    <div class="footer-links">
+        <a href="polityka-prywatnosci.html">Polityka prywatności</a>
+        <a href="regulamin.html">Regulamin</a>
+        <a href="cookies.html">Polityka cookies</a>
+        <a href="kontakt.html">Kontakt</a>
+    </div>
+
+    <p>© 2026 RozwodowyPlan.pl</p>
+
+    <p>
+        Informacje zamieszczone w serwisie mają charakter informacyjny.
+        Generator przygotowuje projekt pisma na podstawie odpowiedzi użytkownika i nie stanowi porady prawnej
+        ani nie zastępuje indywidualnej konsultacji z adwokatem lub radcą prawnym.
+    </p>
 
 </footer>
 
