@@ -1,1 +1,237 @@
+<!doctype html>
+<html lang="pl">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Rozwód i separacja krok po kroku | Kreator pism rozwodowych</title>
+  <meta name="description" content="Przygotuj pozew rozwodowy, odpowiedź na pozew, wniosek o zabezpieczenie alimentów lub inne pismo rodzinne krok po kroku. Sprawdź serwis i pobierz gotowy dokument PDF/DOCX." />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Merriweather:wght@700;900&display=swap" rel="stylesheet">
+  <style>
+    :root{
+      --bg:#f4f7fb;
+      --panel:#ffffff;
+      --panel-soft:#f8fafc;
+      --ink:#172033;
+      --muted:#667085;
+      --blue:#2f66d0;
+      --blue-2:#1f4fb2;
+      --blue-soft:#eaf1ff;
+      --green:#2f8f6b;
+      --green-soft:#e9f7f1;
+      --line:#e3e9f2;
+      --dark:#122033;
+      --dark-2:#1b3148;
+      --cream:#f2eee5;
+      --shadow:0 20px 55px rgba(21,39,68,.10);
+      --shadow-soft:0 10px 28px rgba(21,39,68,.08);
+      --radius:26px;
+    }
+    *{box-sizing:border-box}
+    html{scroll-behavior:smooth}
+    body{margin:0;font-family:Inter,system-ui,-apple-system,Segoe UI,sans-serif;color:var(--ink);background:radial-gradient(circle at top left, #ffffff 0, transparent 320px),var(--bg);line-height:1.65}
+    a{color:inherit;text-decoration:none}
+    .topbar{background:#eef4ff;color:#23314d;font-size:14px;text-align:center;padding:10px 18px;border-bottom:1px solid var(--line)}
+    .topbar strong{color:var(--blue-2)}
+    header{position:sticky;top:0;z-index:20;background:rgba(244,247,251,.86);backdrop-filter:blur(18px);border-bottom:1px solid rgba(227,233,242,.75)}
+    .nav{max-width:1180px;margin:0 auto;padding:18px 22px;display:flex;align-items:center;justify-content:space-between;gap:18px}
+    .brand{display:flex;align-items:center;gap:12px;font-weight:800;color:var(--ink);letter-spacing:.02em}
+    .seal{width:44px;height:44px;border-radius:18px;background:linear-gradient(135deg,#2f66d0,#28a6a1);display:grid;place-items:center;color:#fff;font-size:20px;box-shadow:var(--shadow-soft)}
+    .navlinks{display:flex;gap:20px;color:#667085;font-size:14px;align-items:center}
+    .btn{display:inline-flex;align-items:center;justify-content:center;gap:10px;padding:14px 22px;border-radius:999px;font-weight:800;border:1px solid transparent;transition:.2s ease;cursor:pointer}
+    .btn.primary{background:var(--blue);color:white;border-color:rgba(255,255,255,.25);box-shadow:0 14px 28px rgba(47,102,208,.22)}
+    .btn.primary:hover{background:var(--blue-2);transform:translateY(-1px)}
+    .btn.secondary{background:#fff;color:var(--ink);border-color:var(--line);box-shadow:var(--shadow-soft)}
+    .btn.secondary:hover{border-color:#b8c9e8;transform:translateY(-1px)}
+    .hero{background:linear-gradient(180deg,#f7f9fd 0%,#f0f4fa 100%);border-bottom:1px solid var(--line)}
+    .wrap{max-width:1180px;margin:0 auto;padding:72px 22px}
+    .hero-grid{display:grid;grid-template-columns:1.02fr .98fr;gap:34px;align-items:center}
+    .eyebrow{display:inline-flex;align-items:center;gap:9px;color:var(--blue-2);background:#fff;border:1px solid var(--line);border-radius:18px;padding:8px 14px;font-size:13px;font-weight:800;text-transform:uppercase;letter-spacing:.08em;box-shadow:var(--shadow-soft)}
+    .eyebrow:before{content:"";width:8px;height:8px;background:var(--blue);border-radius:50%}
+    h1,h2,h3{color:var(--ink);line-height:1.12;margin:0 0 18px;letter-spacing:-.04em}
+    h1{font-size:clamp(42px,5vw,68px);margin-top:22px;font-weight:850}
+    h2{font-size:clamp(30px,3.5vw,46px);font-weight:850}
+    h3{font-size:22px;font-weight:850}
+    .lead{font-size:20px;color:#526071;max-width:690px;margin:0 0 28px}
+    .hero-actions{display:flex;flex-wrap:wrap;gap:14px;margin:28px 0}
+    .trust{display:grid;grid-template-columns:repeat(2,1fr);gap:12px;margin-top:28px}
+    .trust div{background:rgba(255,255,255,.82);border:1px solid var(--line);border-radius:20px;padding:14px 16px;font-weight:700;color:#38465a;box-shadow:var(--shadow-soft)}
+    .video-card{background:#fff;border:1px solid var(--line);border-radius:32px;padding:18px;box-shadow:var(--shadow)}
+    .video-frame{aspect-ratio:16/10;border-radius:26px;background:linear-gradient(135deg,var(--dark),var(--dark-2));display:grid;place-items:center;text-align:center;padding:34px;position:relative;overflow:hidden;color:#fff}
+    .video-frame:before{content:"";position:absolute;inset:22px;border:1px solid rgba(255,255,255,.10);border-radius:22px;background:linear-gradient(90deg,rgba(255,255,255,.07),transparent)}
+    .video-frame:after{content:"Workflow planu  0/4";position:absolute;right:24px;top:24px;color:#dbeafe;background:rgba(255,255,255,.08);border:1px solid rgba(255,255,255,.12);border-radius:999px;padding:8px 12px;font-size:13px;font-weight:800}
+    .play{width:74px;height:74px;border-radius:24px;background:var(--cream);color:var(--dark);display:grid;place-items:center;font-size:30px;margin:0 auto 18px;box-shadow:0 18px 40px rgba(0,0,0,.22)}
+    .video-note{margin:14px 4px 0;color:var(--muted);font-size:14px}
+    .section{padding:82px 22px;background:#fff}
+    .section.alt{background:var(--bg)}
+    .container{max-width:1180px;margin:0 auto}
+    .center{text-align:center;max-width:830px;margin:0 auto 38px}
+    .center p,.section p{color:#586579;font-size:18px}
+    .cards{display:grid;grid-template-columns:repeat(4,1fr);gap:18px}
+    .card,.problem,.list,.pricebox{background:#fff;border:1px solid var(--line);border-radius:var(--radius);padding:24px;box-shadow:var(--shadow-soft)}
+    .card .num{width:46px;height:46px;border-radius:18px;background:var(--blue);color:white;display:grid;place-items:center;font-weight:900;margin-bottom:18px;box-shadow:0 12px 24px rgba(47,102,208,.20)}
+    .card p,.problem span{color:var(--muted);font-size:15px;margin:0}
+    .problems{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
+    .problem{display:flex;flex-direction:column;gap:8px;position:relative;overflow:hidden}
+    .problem:before{content:"";position:absolute;left:0;top:0;bottom:0;width:4px;background:var(--blue)}
+    .problem strong{font-size:17px;color:var(--ink)}
+    .split{display:grid;grid-template-columns:1fr 1fr;gap:34px;align-items:center}
+    .list{display:grid;gap:12px;background:#fbfdff}
+    .item{display:flex;gap:12px;align-items:flex-start;background:#fff;border:1px solid var(--line);border-radius:18px;padding:14px 16px;color:#38465a;font-weight:600}
+    .tick{width:26px;height:26px;flex:0 0 26px;border-radius:10px;background:var(--green-soft);color:var(--green);display:grid;place-items:center;font-weight:900}
+    .pricebox{background:linear-gradient(135deg,var(--dark),#203852);color:#fff;border-color:rgba(255,255,255,.12);box-shadow:0 24px 60px rgba(18,32,51,.22)}
+    .pricebox h3{color:#fff}
+    .price{font-size:62px;font-weight:900;letter-spacing:-.06em;margin:8px 0;color:#fff}
+    .price small{font-size:18px;color:#cbd5e1;letter-spacing:0}
+    .promo{background:rgba(47,102,208,.20);border:1px solid rgba(147,197,253,.25);border-radius:20px;padding:18px;margin:18px 0;color:#e9f2ff}
+    .promo strong{color:#ffffff}
+    .notice{font-size:14px;color:#d7deea}
+    .faq{display:grid;gap:14px;max-width:900px;margin:0 auto}
+    details{background:#fff;border:1px solid var(--line);border-radius:18px;padding:18px 20px;box-shadow:var(--shadow-soft)}
+    summary{cursor:pointer;font-weight:800;color:var(--ink)}
+    details p{margin-bottom:0;color:#5b6475}
+    footer{background:#101827;color:#cbd5e1;padding:34px 22px;text-align:center;font-size:14px}
+    footer a{color:#dbeafe}
+    @media(max-width:900px){.hero-grid,.split{grid-template-columns:1fr}.cards{grid-template-columns:1fr 1fr}.problems{grid-template-columns:1fr}.navlinks{display:none}.wrap{padding-top:54px}.trust{grid-template-columns:1fr}}
+    @media(max-width:560px){.cards{grid-template-columns:1fr}.hero-actions .btn{width:100%}.price{font-size:54px}.section{padding:58px 18px}.nav{padding-inline:18px}}
+  </style>
+</head>
+<body>
+  <div class="topbar">Promocja startowa: do <strong>31 lipca 2026 r.</strong> pobranie pierwszego dokumentu może być bezpłatne w zamian za krótką opinię o serwisie.</div>
 
+  <header>
+    <nav class="nav">
+      <a class="brand" href="#top"><span class="seal">§</span><span>Rozwodowy Plan</span></a>
+      <div class="navlinks">
+        <a href="#jak-dziala">Jak działa</a>
+        <a href="#sytuacje">Sytuacje</a>
+        <a href="#cena">Cena</a>
+        <a href="#faq">FAQ</a>
+      </div>
+      <a class="btn primary" href="https://plan.wzory-pism-online.pl" target="_blank" rel="noopener">Przejdź do planu</a>
+    </nav>
+  </header>
+
+  <main id="top">
+    <section class="hero">
+      <div class="wrap hero-grid">
+        <div>
+          <span class="eyebrow">Pisma rozwodowe i rodzinne krok po kroku</span>
+          <h1>Nie zaczynaj rozwodu od pustej kartki.</h1>
+          <p class="lead">Uporządkuj sytuację, dzieci, alimenty, winę, dowody i dokumenty. Serwis prowadzi Cię przez przygotowanie pisma tak, aby łatwiej zobaczyć, co wpisać, czego nie pominąć i jak złożyć całość w czytelny dokument.</p>
+          <div class="hero-actions">
+            <a class="btn primary" href="https://plan.wzory-pism-online.pl" target="_blank" rel="noopener">Ułóż mój plan rozwodu</a>
+            <a class="btn secondary" href="#wideo">Zobacz, jak działa serwis</a>
+          </div>
+          <div class="trust">
+            <div>Bez ściany prawniczego tekstu</div>
+            <div>Pozew, odpowiedź, alimenty, zabezpieczenie</div>
+            <div>Podpowiedzi, checklisty i moduły</div>
+            <div>Gotowy plik do pobrania za 49 zł</div>
+          </div>
+        </div>
+        <div class="video-card" id="wideo">
+          <div class="video-frame">
+            <div>
+              <div class="play">▶</div>
+              <h3 style="color:#fff;margin-bottom:8px">Miejsce na Twoje wideo</h3>
+              <p style="color:#d7deea;margin:0">Tu wstawisz nagranie, na którym pokazujesz, jak korzystasz z plan.wzory-pism-online.pl.</p>
+            </div>
+          </div>
+          <p class="video-note">Wideo najlepiej pokazać spokojnie: wybór pisma, wypełnienie pól, podgląd, SmartCheck i moment pobrania dokumentu.</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container center">
+        <h2>Rozwód to nie tylko pozew. To plan sprawy.</h2>
+        <p>W sprawie rozwodowej łatwo pomieszać wszystko naraz: emocje, dzieci, alimenty, winę, mieszkanie, koszty, dowody i załączniki. Dlatego najpierw warto uporządkować sytuację, a dopiero potem przygotować właściwe pismo.</p>
+      </div>
+      <div class="container cards">
+        <div class="card"><div class="num">01</div><h3>Wybierasz sytuację</h3><p>Rozwód bez winy, z winą, separacja, odpowiedź na pozew, dzieci, alimenty, zabezpieczenie albo koszty.</p></div>
+        <div class="card"><div class="num">02</div><h3>System prowadzi pytaniami</h3><p>Nie musisz wiedzieć od razu, jak brzmi formalny dokument. Zaczynasz od problemu, nie od nazwy formularza.</p></div>
+        <div class="card"><div class="num">03</div><h3>Porządkujesz fakty</h3><p>Daty, zdarzenia, dowody, świadkowie, koszty dziecka i załączniki trafiają w odpowiednie miejsce.</p></div>
+        <div class="card"><div class="num">04</div><h3>Pobierasz dokument</h3><p>Po sprawdzeniu treści możesz pobrać gotowy plik PDF/DOCX do wydruku albo dalszej edycji.</p></div>
+      </div>
+    </section>
+
+    <section class="section alt" id="sytuacje">
+      <div class="container center">
+        <h2>Dla osób, które są w rozwodzie albo dopiero nie wiedzą, od czego zacząć</h2>
+        <p>Serwis pomaga przejść od chaosu do konkretnego pisma. Bez obietnic wygranej. Bez udawania kancelarii. Z naciskiem na porządek, kompletność i spokojne opisanie sprawy.</p>
+      </div>
+      <div class="container problems">
+        <div class="problem"><strong>Chcesz rozwodu bez orzekania o winie</strong><span>Przygotujesz spokojny opis rozpadu pożycia, dokumenty, załączniki i ustalenia dotyczące dzieci, jeśli są w sprawie.</span></div>
+        <div class="problem"><strong>Chcesz rozwodu z orzeczeniem o winie</strong><span>Uporządkujesz zdarzenia według schematu: data, fakt, dowód, świadek, wpływ na małżeństwo albo dzieci.</span></div>
+        <div class="problem"><strong>Dostałaś lub dostałeś pozew</strong><span>Możesz przygotować odpowiedź: stanowisko wobec rozwodu, winy, dzieci, alimentów, mieszkania i dowodów.</span></div>
+        <div class="problem"><strong>Potrzebujesz zabezpieczenia</strong><span>Ułożysz wniosek dotyczący alimentów, kontaktów, miejsca pobytu dziecka, mieszkania albo pilnych kosztów.</span></div>
+        <div class="problem"><strong>Macie dzieci</strong><span>Serwis prowadzi przez miejsce pobytu, kontakty, wakacje, święta, koszty, szkołę, lekarza i przekazywanie informacji.</span></div>
+        <div class="problem"><strong>Boisz się drugiej strony</strong><span>Możesz spokojnie opisać kontrolę, groźby, przemoc ekonomiczną, izolowanie, nękanie lub presję — bez sensacyjnego tonu.</span></div>
+      </div>
+    </section>
+
+    <section class="section" id="jak-dziala">
+      <div class="container split">
+        <div>
+          <h2>Wzór z internetu często nie wystarcza, gdy nie wiesz, co wpisać.</h2>
+          <p>Zwykły wzór daje puste pola. A w rozwodzie najtrudniejsze bywa nie samo pobranie formularza, tylko decyzja: co napisać, jak opisać fakty, gdzie dodać dowody, jak nie pomieszać dzieci, alimentów, winy i kosztów w jednym chaotycznym uzasadnieniu.</p>
+          <p>Ten serwis pomaga przejść przez ten proces krok po kroku i przygotować dokument w bardziej uporządkowany sposób.</p>
+        </div>
+        <div class="list">
+          <div class="item"><span class="tick">✓</span><span>plan pisma: żądania, uzasadnienie, dowody i załączniki</span></div>
+          <div class="item"><span class="tick">✓</span><span>podpowiedzi do pól, które można dopasować do swojej sytuacji</span></div>
+          <div class="item"><span class="tick">✓</span><span>checklisty dokumentów: akty, koszty, potwierdzenia, rachunki, wiadomości</span></div>
+          <div class="item"><span class="tick">✓</span><span>SmartCheck przed pobraniem: puste pola, daty, podpis, załączniki</span></div>
+          <div class="item"><span class="tick">✓</span><span>gotowy plik PDF/DOCX do pobrania po przygotowaniu dokumentu</span></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section alt" id="cena">
+      <div class="container split">
+        <div>
+          <h2>Najpierw sprawdzasz, potem decydujesz o pobraniu.</h2>
+          <p>Główna wartość serwisu to przygotowanie pisma rozwodowego lub rodzinnego krok po kroku. Darmowe zalogowanie jest tylko dodatkową możliwością: możesz wejść, zobaczyć sposób działania, sprawdzić pytania i przekonać się, czy taka forma Ci odpowiada.</p>
+          <p>Opłata pojawia się dopiero przy pobraniu gotowego dokumentu.</p>
+        </div>
+        <div class="pricebox">
+          <h3>Pobranie gotowego pliku</h3>
+          <div class="price">49 zł <small>/ dokument</small></div>
+          <p style="color:#d7deea">Po wypełnieniu pisma możesz sprawdzić podgląd i pobrać dokument w dostępnej wersji PDF/DOCX.</p>
+          <div class="promo"><strong>Promocja do 31 lipca 2026 r.</strong><br>Pierwszy dokument możesz pobrać bezpłatnie w zamian za krótką opinię o działaniu serwisu.</div>
+          <a class="btn primary" style="background:#fff;color:var(--dark);border-color:#d9e4f2;width:100%" href="https://plan.wzory-pism-online.pl" target="_blank" rel="noopener">Przejdź do planu</a>
+          <p class="notice">Serwis pomaga technicznie przygotować pismo. Nie zastępuje indywidualnej porady prawnej ani decyzji sądu.</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container center">
+        <h2>Nie obiecujemy wyniku sprawy. Dajemy porządek.</h2>
+        <p>Przy pilnym terminie, przemocy, sporze o dzieci, dużym majątku albo skomplikowanej sytuacji warto rozważyć kontakt z profesjonalnym pełnomocnikiem lub nieodpłatną pomocą prawną. Serwis ma pomóc przygotować dokument, uporządkować fakty i sprawdzić kompletność przed pobraniem.</p>
+        <div class="hero-actions" style="justify-content:center">
+          <a class="btn primary" href="https://plan.wzory-pism-online.pl" target="_blank" rel="noopener">Rozpocznij plan rozwodu</a>
+          <a class="btn secondary" href="#faq">Przeczytaj FAQ</a>
+        </div>
+      </div>
+    </section>
+
+    <section class="section alt" id="faq">
+      <div class="container center"><h2>Najczęstsze pytania</h2></div>
+      <div class="faq">
+        <details><summary>Czy mogę zalogować się za darmo?</summary><p>Tak. Darmowe logowanie pozwala sprawdzić sposób działania serwisu i zobaczyć, jak wygląda proces przygotowania dokumentu. Pobranie gotowego pliku jest płatne, z wyjątkiem promocji startowej.</p></details>
+        <details><summary>Ile kosztuje pobranie dokumentu?</summary><p>Pobranie gotowego dokumentu kosztuje 49 zł. Do 31 lipca 2026 r. trwa promocja: pierwszy dokument można pobrać bezpłatnie w zamian za krótką opinię o serwisie.</p></details>
+        <details><summary>Czy serwis zastępuje adwokata?</summary><p>Nie. To narzędzie techniczne do uporządkowania danych i przygotowania pisma. Nie jest kancelarią, sądem ani gwarancją rozstrzygnięcia.</p></details>
+        <details><summary>Czy mogę przygotować pozew bez orzekania o winie?</summary><p>Tak. Serwis prowadzi przez spokojny opis sprawy, dokumenty, załączniki i ustalenia dotyczące dzieci, jeśli występują.</p></details>
+        <details><summary>Czy mogę przygotować dokument przy dzieciach i alimentach?</summary><p>Tak. Możesz uporządkować miejsce pobytu dziecka, kontakty, koszty, szkołę, lekarza, wakacje, święta oraz zabezpieczenie alimentów.</p></details>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <p><strong>Rozwodowy Plan</strong> — techniczne narzędzie do przygotowania pism rozwodowych i rodzinnych. <a href="https://plan.wzory-pism-online.pl" target="_blank" rel="noopener">plan.wzory-pism-online.pl</a></p>
+  </footer>
+</body>
+</html>
