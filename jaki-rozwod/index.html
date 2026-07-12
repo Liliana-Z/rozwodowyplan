@@ -1,1 +1,1483 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
+  <title>Rozwód bez orzekania o winie czy z winą? | RozwodowyPlan.pl</title>
+
+  <meta
+    name="description"
+    content="Nie zaczynaj rozwodu od przypadkowego wzoru. Sprawdź, czy w Twojej sytuacji warto rozważyć rozwód bez orzekania o winie, czy potrzebujesz dokładniejszego przygotowania."
+  />
+
+  <style>
+    :root {
+      --navy: #111827;
+      --navy-2: #182337;
+      --navy-3: #24324d;
+      --gold: #c6a35d;
+      --gold-light: #eadbb9;
+      --ivory: #faf6ee;
+      --paper: #fffdf8;
+      --white: #ffffff;
+      --ink: #1f2937;
+      --muted: #667085;
+      --muted-2: #8a94a6;
+      --line: #e7ddca;
+      --wine: #7f1d1d;
+      --wine-soft: #fff2ef;
+      --green: #2d6a4f;
+      --green-soft: #edf7f2;
+      --shadow: 0 26px 90px rgba(17, 24, 39, 0.16);
+      --shadow-soft: 0 18px 48px rgba(17, 24, 39, 0.08);
+      --radius-lg: 34px;
+      --radius-md: 22px;
+      --radius-sm: 16px;
+      --max: 1180px;
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      font-family: Arial, sans-serif;
+      color: var(--ink);
+      line-height: 1.65;
+      background:
+        radial-gradient(circle at top left, rgba(198, 163, 93, 0.22), transparent 30%),
+        radial-gradient(circle at 85% 12%, rgba(127, 29, 29, 0.10), transparent 28%),
+        linear-gradient(180deg, #fbf7ef 0%, #fffdf8 42%, #f8f1e6 100%);
+    }
+
+    a {
+      color: inherit;
+      text-decoration: none;
+    }
+
+    button {
+      font: inherit;
+    }
+
+    .page {
+      overflow: hidden;
+    }
+
+    .serif {
+      font-family: Georgia, "Times New Roman", serif;
+    }
+
+    .container {
+      width: min(var(--max), calc(100% - 40px));
+      margin: 0 auto;
+    }
+
+    .topbar {
+      padding: 22px 0;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 24px;
+    }
+
+    .brand {
+      display: flex;
+      align-items: center;
+      gap: 13px;
+      font-weight: 900;
+      letter-spacing: -0.02em;
+      color: var(--navy);
+    }
+
+    .brand-mark {
+      width: 44px;
+      height: 44px;
+      border-radius: 50%;
+      background: linear-gradient(135deg, var(--navy), var(--navy-3));
+      color: var(--gold-light);
+      display: grid;
+      place-items: center;
+      font-family: Georgia, "Times New Roman", serif;
+      font-size: 24px;
+      box-shadow: 0 16px 38px rgba(17, 24, 39, 0.22);
+    }
+
+    .nav {
+      display: flex;
+      align-items: center;
+      gap: 18px;
+      color: #485066;
+      font-size: 14px;
+      font-weight: 700;
+    }
+
+    .nav a:hover {
+      color: var(--navy);
+    }
+
+    .nav-button {
+      padding: 11px 16px;
+      border: 1px solid var(--line);
+      border-radius: 999px;
+      background: rgba(255, 253, 248, 0.78);
+      color: var(--navy);
+    }
+
+    .hero {
+      padding: 58px 0 46px;
+      display: grid;
+      grid-template-columns: 1.05fr 0.95fr;
+      gap: 46px;
+      align-items: center;
+    }
+
+    .eyebrow {
+      display: inline-flex;
+      align-items: center;
+      gap: 9px;
+      padding: 9px 13px;
+      margin-bottom: 22px;
+      border-radius: 999px;
+      border: 1px solid rgba(198, 163, 93, 0.42);
+      background: rgba(198, 163, 93, 0.16);
+      color: var(--navy);
+      font-size: 12px;
+      font-weight: 900;
+      letter-spacing: 0.09em;
+      text-transform: uppercase;
+    }
+
+    .eyebrow-dot {
+      width: 8px;
+      height: 8px;
+      border-radius: 999px;
+      background: var(--gold);
+    }
+
+    h1,
+    h2,
+    h3 {
+      font-family: Georgia, "Times New Roman", serif;
+      color: var(--navy);
+      letter-spacing: -0.04em;
+    }
+
+    h1 {
+      font-size: clamp(42px, 6vw, 76px);
+      line-height: 0.98;
+      margin-bottom: 24px;
+    }
+
+    .hero-lead {
+      font-family: Georgia, "Times New Roman", serif;
+      font-size: clamp(20px, 2.2vw, 25px);
+      line-height: 1.42;
+      color: #354052;
+      max-width: 720px;
+      margin-bottom: 24px;
+    }
+
+    .hero-lead strong {
+      color: var(--navy);
+    }
+
+    .micro-promise {
+      display: grid;
+      gap: 10px;
+      margin: 26px 0 30px;
+      max-width: 720px;
+    }
+
+    .micro-promise div {
+      display: grid;
+      grid-template-columns: 28px 1fr;
+      gap: 10px;
+      align-items: start;
+      color: #3f485b;
+      font-size: 16px;
+    }
+
+    .icon {
+      width: 28px;
+      height: 28px;
+      border-radius: 999px;
+      display: grid;
+      place-items: center;
+      background: var(--green-soft);
+      color: var(--green);
+      font-weight: 900;
+      font-size: 14px;
+    }
+
+    .hero-actions {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 14px;
+      align-items: center;
+      margin-bottom: 18px;
+    }
+
+    .button {
+      display: inline-flex;
+      justify-content: center;
+      align-items: center;
+      gap: 10px;
+      min-height: 54px;
+      padding: 15px 23px;
+      border-radius: 999px;
+      border: 0;
+      cursor: pointer;
+      font-weight: 900;
+      font-size: 15px;
+      transition: transform 0.2s ease, box-shadow 0.2s ease, background 0.2s ease;
+    }
+
+    .button:hover {
+      transform: translateY(-2px);
+    }
+
+    .button-primary {
+      color: #fff;
+      background: linear-gradient(135deg, var(--navy), var(--navy-3));
+      box-shadow: 0 18px 42px rgba(17, 24, 39, 0.26);
+    }
+
+    .button-primary:hover {
+      box-shadow: 0 22px 52px rgba(17, 24, 39, 0.34);
+    }
+
+    .button-gold {
+      color: var(--navy);
+      background: linear-gradient(135deg, #f2deb0, var(--gold));
+      box-shadow: 0 18px 40px rgba(198, 163, 93, 0.26);
+    }
+
+    .button-secondary {
+      color: var(--navy);
+      background: rgba(255, 253, 248, 0.86);
+      border: 1px solid var(--line);
+    }
+
+    .hero-note {
+      color: var(--muted);
+      font-size: 14px;
+      max-width: 650px;
+    }
+
+    .decision-card {
+      position: relative;
+      padding: 30px;
+      border-radius: var(--radius-lg);
+      background: rgba(255, 253, 248, 0.9);
+      border: 1px solid var(--line);
+      box-shadow: var(--shadow);
+      overflow: hidden;
+    }
+
+    .decision-card::before {
+      content: "";
+      position: absolute;
+      inset: 16px;
+      border-radius: 25px;
+      border: 1px solid rgba(198, 163, 93, 0.34);
+      pointer-events: none;
+    }
+
+    .decision-card-inner {
+      position: relative;
+      z-index: 1;
+    }
+
+    .card-label {
+      color: var(--gold);
+      font-size: 12px;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      font-weight: 900;
+      margin-bottom: 12px;
+    }
+
+    .decision-card h2 {
+      font-size: 34px;
+      line-height: 1.08;
+      margin-bottom: 20px;
+    }
+
+    .choice-box {
+      display: grid;
+      gap: 14px;
+      margin-top: 24px;
+    }
+
+    .choice-item {
+      padding: 18px;
+      border-radius: 18px;
+      border: 1px solid var(--line);
+      background: rgba(250, 246, 238, 0.66);
+    }
+
+    .choice-item strong {
+      display: block;
+      color: var(--navy);
+      font-size: 16px;
+      margin-bottom: 4px;
+    }
+
+    .choice-item span {
+      display: block;
+      color: #535d70;
+      font-size: 14px;
+    }
+
+    .trust-strip {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 14px;
+      padding: 18px;
+      margin: 10px auto 54px;
+      border-radius: 24px;
+      border: 1px solid var(--line);
+      background: rgba(255, 253, 248, 0.82);
+      box-shadow: var(--shadow-soft);
+    }
+
+    .trust-item {
+      padding: 16px;
+      border-right: 1px solid var(--line);
+    }
+
+    .trust-item:last-child {
+      border-right: 0;
+    }
+
+    .trust-item strong {
+      display: block;
+      color: var(--navy);
+      font-family: Georgia, "Times New Roman", serif;
+      font-size: 20px;
+      margin-bottom: 4px;
+    }
+
+    .trust-item span {
+      color: var(--muted);
+      font-size: 13px;
+    }
+
+    .video-section {
+      padding: 20px 0 78px;
+    }
+
+    .section-head {
+      max-width: 840px;
+      margin-bottom: 34px;
+    }
+
+    .section-head.center {
+      text-align: center;
+      margin-left: auto;
+      margin-right: auto;
+    }
+
+    .section-kicker {
+      color: var(--gold);
+      font-size: 12px;
+      font-weight: 900;
+      text-transform: uppercase;
+      letter-spacing: 0.12em;
+      margin-bottom: 10px;
+    }
+
+    .section-head h2 {
+      font-size: clamp(32px, 4.3vw, 54px);
+      line-height: 1.04;
+      margin-bottom: 16px;
+    }
+
+    .section-head p {
+      color: #4d5668;
+      font-size: 19px;
+    }
+
+    .video-frame {
+      position: relative;
+      width: min(980px, 100%);
+      margin: 0 auto;
+      aspect-ratio: 16 / 9;
+      border-radius: 34px;
+      overflow: hidden;
+      background:
+        linear-gradient(rgba(17, 24, 39, 0.74), rgba(17, 24, 39, 0.74)),
+        radial-gradient(circle at center, rgba(198, 163, 93, 0.38), transparent 46%);
+      border: 1px solid rgba(198, 163, 93, 0.45);
+      box-shadow: var(--shadow);
+    }
+
+    .video-frame iframe,
+    .video-frame video {
+      position: absolute;
+      inset: 0;
+      width: 100%;
+      height: 100%;
+      border: 0;
+      display: block;
+    }
+
+    .video-placeholder {
+      position: absolute;
+      inset: 0;
+      display: grid;
+      place-items: center;
+      text-align: center;
+      color: #fff;
+      padding: 28px;
+    }
+
+    .play-circle {
+      width: 86px;
+      height: 86px;
+      margin: 0 auto 18px;
+      border-radius: 999px;
+      display: grid;
+      place-items: center;
+      background: rgba(255, 255, 255, 0.14);
+      border: 1px solid rgba(255, 255, 255, 0.38);
+      color: var(--gold-light);
+      font-size: 34px;
+      box-shadow: 0 18px 44px rgba(0, 0, 0, 0.25);
+    }
+
+    .video-placeholder h3 {
+      color: #fff;
+      font-size: clamp(26px, 4vw, 40px);
+      line-height: 1.08;
+      margin-bottom: 10px;
+    }
+
+    .video-placeholder p {
+      color: #e9edf5;
+      max-width: 580px;
+      margin: 0 auto;
+      font-size: 15px;
+    }
+
+    .section {
+      padding: 78px 0;
+    }
+
+    .dilemma-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 22px;
+    }
+
+    .dilemma-card {
+      position: relative;
+      padding: 30px;
+      border-radius: var(--radius-md);
+      border: 1px solid var(--line);
+      background: rgba(255, 253, 248, 0.88);
+      box-shadow: var(--shadow-soft);
+      overflow: hidden;
+    }
+
+    .dilemma-card::after {
+      content: "";
+      position: absolute;
+      width: 190px;
+      height: 190px;
+      right: -90px;
+      top: -90px;
+      border-radius: 999px;
+      background: rgba(198, 163, 93, 0.15);
+    }
+
+    .dilemma-card.wine::after {
+      background: rgba(127, 29, 29, 0.10);
+    }
+
+    .dilemma-card h3 {
+      position: relative;
+      z-index: 1;
+      font-size: 30px;
+      line-height: 1.12;
+      margin-bottom: 14px;
+    }
+
+    .dilemma-card p {
+      position: relative;
+      z-index: 1;
+      color: #4d5668;
+      font-size: 17px;
+      margin-bottom: 18px;
+    }
+
+    .bullet-list {
+      position: relative;
+      z-index: 1;
+      display: grid;
+      gap: 12px;
+      list-style: none;
+      margin-top: 18px;
+    }
+
+    .bullet-list li {
+      display: grid;
+      grid-template-columns: 28px 1fr;
+      gap: 11px;
+      align-items: start;
+      color: #354052;
+      font-size: 16px;
+    }
+
+    .bullet-alert .icon {
+      background: var(--wine-soft);
+      color: var(--wine);
+    }
+
+    .bridge-box {
+      margin-top: 24px;
+      padding: 26px;
+      border-radius: var(--radius-md);
+      background: linear-gradient(135deg, var(--navy), var(--navy-3));
+      color: #fff;
+      box-shadow: var(--shadow-soft);
+    }
+
+    .bridge-box h3 {
+      color: #fff;
+      font-size: 28px;
+      line-height: 1.14;
+      margin-bottom: 10px;
+    }
+
+    .bridge-box p {
+      color: #e9edf5;
+      max-width: 920px;
+    }
+
+    .quiz-section {
+      padding: 78px 0;
+    }
+
+    .quiz-shell {
+      border-radius: var(--radius-lg);
+      background:
+        linear-gradient(135deg, rgba(17, 24, 39, 0.98), rgba(36, 50, 77, 0.98)),
+        radial-gradient(circle at top right, rgba(198, 163, 93, 0.25), transparent 44%);
+      color: #fff;
+      box-shadow: var(--shadow);
+      overflow: hidden;
+    }
+
+    .quiz-layout {
+      display: grid;
+      grid-template-columns: 0.8fr 1.2fr;
+      gap: 0;
+    }
+
+    .quiz-side {
+      padding: 36px;
+      border-right: 1px solid rgba(255, 255, 255, 0.12);
+      background: rgba(255, 255, 255, 0.04);
+    }
+
+    .quiz-side h2 {
+      color: #fff;
+      font-size: 38px;
+      line-height: 1.04;
+      margin-bottom: 16px;
+    }
+
+    .quiz-side p {
+      color: #d7deea;
+      font-size: 16px;
+      margin-bottom: 22px;
+    }
+
+    .quiz-mini-list {
+      list-style: none;
+      display: grid;
+      gap: 12px;
+      color: #e9edf5;
+      font-size: 14px;
+    }
+
+    .quiz-main {
+      padding: 36px;
+    }
+
+    .progress-row {
+      display: flex;
+      justify-content: space-between;
+      gap: 18px;
+      color: var(--gold-light);
+      font-weight: 900;
+      font-size: 13px;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      margin-bottom: 16px;
+    }
+
+    .progress-bar {
+      width: 100%;
+      height: 9px;
+      background: rgba(255, 255, 255, 0.12);
+      border-radius: 999px;
+      overflow: hidden;
+      margin-bottom: 28px;
+    }
+
+    .progress-fill {
+      height: 100%;
+      width: 0%;
+      border-radius: 999px;
+      background: linear-gradient(90deg, var(--gold-light), var(--gold));
+      transition: width 0.25s ease;
+    }
+
+    .question-card {
+      padding: 26px;
+      border-radius: 24px;
+      border: 1px solid rgba(255, 255, 255, 0.14);
+      background: rgba(255, 255, 255, 0.07);
+    }
+
+    .question-card h3 {
+      color: #fff;
+      font-size: 29px;
+      line-height: 1.18;
+      margin-bottom: 18px;
+    }
+
+    .answer-grid {
+      display: grid;
+      gap: 12px;
+    }
+
+    .answer-btn {
+      cursor: pointer;
+      width: 100%;
+      padding: 16px 17px;
+      border-radius: 18px;
+      color: #fff;
+      text-align: left;
+      border: 1px solid rgba(255, 255, 255, 0.15);
+      background: rgba(255, 255, 255, 0.07);
+      transition: 0.2s ease;
+    }
+
+    .answer-btn:hover,
+    .answer-btn.active {
+      transform: translateY(-1px);
+      background: rgba(198, 163, 93, 0.22);
+      border-color: rgba(198, 163, 93, 0.72);
+    }
+
+    .answer-btn strong {
+      display: block;
+      font-size: 15px;
+      margin-bottom: 2px;
+    }
+
+    .answer-btn span {
+      display: block;
+      color: #d7deea;
+      font-size: 13px;
+    }
+
+    .quiz-actions {
+      display: flex;
+      justify-content: space-between;
+      gap: 14px;
+      flex-wrap: wrap;
+      margin-top: 20px;
+    }
+
+    .quiz-actions .button-secondary {
+      color: #fff;
+      border-color: rgba(255, 255, 255, 0.18);
+      background: rgba(255, 255, 255, 0.08);
+    }
+
+    .result-box {
+      display: none;
+      margin-top: 24px;
+      padding: 28px;
+      border-radius: 26px;
+      color: var(--ink);
+      background: var(--paper);
+      border: 1px solid rgba(198, 163, 93, 0.45);
+    }
+
+    .result-box.visible {
+      display: block;
+    }
+
+    .result-box h3 {
+      font-size: 32px;
+      line-height: 1.1;
+      margin-bottom: 12px;
+    }
+
+    .result-box p {
+      color: #4d5668;
+      font-size: 17px;
+      margin-bottom: 16px;
+    }
+
+    .result-note {
+      padding: 15px;
+      border-radius: 16px;
+      background: #f7f1e8;
+      border: 1px solid var(--line);
+      color: #4d5668;
+      font-size: 14px;
+      margin-top: 16px;
+    }
+
+    .result-actions {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 12px;
+      margin-top: 22px;
+    }
+
+    .steps-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 18px;
+    }
+
+    .step-card {
+      padding: 26px;
+      border-radius: var(--radius-md);
+      background: rgba(255, 253, 248, 0.88);
+      border: 1px solid var(--line);
+      box-shadow: var(--shadow-soft);
+    }
+
+    .step-number {
+      width: 44px;
+      height: 44px;
+      margin-bottom: 16px;
+      border-radius: 999px;
+      display: grid;
+      place-items: center;
+      color: var(--gold-light);
+      background: var(--navy);
+      font-weight: 900;
+    }
+
+    .step-card h3 {
+      font-size: 25px;
+      line-height: 1.12;
+      margin-bottom: 10px;
+    }
+
+    .step-card p {
+      color: #4d5668;
+      font-size: 16px;
+    }
+
+    .final-cta {
+      padding: 48px;
+      border-radius: var(--radius-lg);
+      text-align: center;
+      color: #fff;
+      background:
+        linear-gradient(rgba(17, 24, 39, 0.9), rgba(17, 24, 39, 0.9)),
+        radial-gradient(circle at top right, rgba(198, 163, 93, 0.45), transparent 42%);
+      box-shadow: var(--shadow);
+    }
+
+    .final-cta h2 {
+      color: #fff;
+      font-size: clamp(34px, 5vw, 58px);
+      line-height: 1.02;
+      margin-bottom: 16px;
+    }
+
+    .final-cta p {
+      max-width: 790px;
+      margin: 0 auto 26px;
+      color: #e9edf5;
+      font-size: 19px;
+    }
+
+    .legal-note {
+      width: min(980px, calc(100% - 40px));
+      margin: 0 auto 42px;
+      padding: 18px;
+      border-radius: 18px;
+      border: 1px solid var(--line);
+      background: rgba(255, 253, 248, 0.82);
+      color: var(--muted);
+      font-size: 13px;
+    }
+
+    footer {
+      padding: 26px 20px 44px;
+      text-align: center;
+      color: var(--muted);
+      font-size: 14px;
+    }
+
+    @media (max-width: 980px) {
+      .hero,
+      .dilemma-grid,
+      .quiz-layout,
+      .steps-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .quiz-side {
+        border-right: 0;
+        border-bottom: 1px solid rgba(255, 255, 255, 0.12);
+      }
+
+      .trust-strip {
+        grid-template-columns: repeat(2, 1fr);
+      }
+
+      .trust-item {
+        border-right: 0;
+        border-bottom: 1px solid var(--line);
+      }
+
+      .trust-item:nth-last-child(-n + 2) {
+        border-bottom: 0;
+      }
+    }
+
+    @media (max-width: 640px) {
+      .container {
+        width: min(100% - 28px, var(--max));
+      }
+
+      .topbar {
+        align-items: flex-start;
+      }
+
+      .nav a:not(.nav-button) {
+        display: none;
+      }
+
+      .hero {
+        padding-top: 34px;
+      }
+
+      .decision-card,
+      .quiz-side,
+      .quiz-main,
+      .final-cta {
+        padding: 22px;
+      }
+
+      .trust-strip {
+        grid-template-columns: 1fr;
+      }
+
+      .trust-item,
+      .trust-item:nth-last-child(-n + 2) {
+        border-bottom: 1px solid var(--line);
+      }
+
+      .trust-item:last-child {
+        border-bottom: 0;
+      }
+
+      .video-frame {
+        border-radius: 24px;
+      }
+
+      .play-circle {
+        width: 66px;
+        height: 66px;
+        font-size: 26px;
+      }
+
+      .button,
+      .quiz-actions .button {
+        width: 100%;
+      }
+
+      .quiz-actions {
+        flex-direction: column-reverse;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <main class="page">
+
+    <!-- GÓRNY PASEK: prosty, kancelaryjny, bez chaosu -->
+    <header class="container topbar">
+      <a class="brand" href="#">
+        <span class="brand-mark">§</span>
+        <span>RozwodowyPlan.pl</span>
+      </a>
+
+      <nav class="nav" aria-label="Nawigacja">
+        <a href="#film">Film</a>
+        <a href="#dylemat">Dylemat</a>
+        <a href="#test" class="nav-button">Zrób test</a>
+      </nav>
+    </header>
+
+    <!-- HERO: główna obietnica i mocny dylemat emocjonalny -->
+    <section class="container hero">
+      <div>
+        <div class="eyebrow">
+          <span class="eyebrow-dot"></span>
+          Decyzja przed pozwem rozwodowym
+        </div>
+
+        <h1>Rozwód bez orzekania o winie czy z winą?</h1>
+
+        <p class="hero-lead">
+          Zanim wybierzesz wzór pozwu, zatrzymaj się na chwilę.
+          <strong>To nie jest tylko formalność.</strong>
+          To decyzja, czy chcesz i możesz iść drogą porozumienia,
+          czy Twoja sytuacja wymaga nazwania krzywdy, ochrony interesów
+          i dokładniejszego przygotowania.
+        </p>
+
+        <div class="micro-promise">
+          <div>
+            <span class="icon">✓</span>
+            <span>6 pytań, które pomagają uporządkować sytuację przed wyborem rodzaju pozwu.</span>
+          </div>
+
+          <div>
+            <span class="icon">✓</span>
+            <span>Spokojny język, bez straszenia i bez namawiania do walki za wszelką cenę.</span>
+          </div>
+
+          <div>
+            <span class="icon">✓</span>
+            <span>Naturalne przejście do przygotowania dokumentu dopasowanego do Twojej sytuacji.</span>
+          </div>
+        </div>
+
+        <div class="hero-actions">
+          <a class="button button-gold" href="#test">
+            Sprawdź swoją ścieżkę →
+          </a>
+
+          <a class="button button-secondary" href="#film">
+            Zobacz krótkie wyjaśnienie
+          </a>
+        </div>
+
+        <p class="hero-note">
+          Test ma charakter informacyjny. Nie zastępuje indywidualnej porady prawnej,
+          zwłaszcza gdy w sprawie pojawia się przemoc, presja, dzieci, majątek albo alimenty.
+        </p>
+      </div>
+
+      <aside class="decision-card" aria-label="Dwie możliwe ścieżki rozwodu">
+        <div class="decision-card-inner">
+          <div class="card-label">Najważniejsze pytanie</div>
+
+          <h2>Czy potrzebujesz spokoju, czy najpierw musisz nazwać prawdę?</h2>
+
+          <p>
+            W wielu sprawach ludzie nie wiedzą, czy wybrać rozwód bez orzekania o winie,
+            bo chcą mieć to już za sobą, czy jednak nie powinni rezygnować z opisania tego,
+            co naprawdę działo się w małżeństwie.
+          </p>
+
+          <div class="choice-box">
+            <div class="choice-item">
+              <strong>Bez orzekania o winie</strong>
+              <span>Gdy jest zgoda, względny spokój i wspólne ustalenia.</span>
+            </div>
+
+            <div class="choice-item">
+              <strong>Z orzekaniem o winie lub dokładniejszą analizą</strong>
+              <span>Gdy była przemoc, presja, zdrada, ukrywanie dochodów albo konflikt o dzieci.</span>
+            </div>
+          </div>
+        </div>
+      </aside>
+    </section>
+
+    <!-- PASEK ZAUFANIA: krótko pokazuje, że strona prowadzi, a nie tylko sprzedaje -->
+    <section class="container trust-strip" aria-label="Najważniejsze korzyści">
+      <div class="trust-item">
+        <strong>3 minuty</strong>
+        <span>krótki test przed wyborem ścieżki</span>
+      </div>
+
+      <div class="trust-item">
+        <strong>6 pytań</strong>
+        <span>o zgodę, dzieci, alimenty i bezpieczeństwo</span>
+      </div>
+
+      <div class="trust-item">
+        <strong>2 ścieżki</strong>
+        <span>spokojniejsza albo wymagająca ostrożności</span>
+      </div>
+
+      <div class="trust-item">
+        <strong>1 cel</strong>
+        <span>lepiej przygotowany pozew rozwodowy</span>
+      </div>
+    </section>
+
+    <!-- MIEJSCE NA FILM 1920x1080 -->
+    <section class="container video-section" id="film">
+      <div class="section-head center">
+        <div class="section-kicker">Najpierw zobacz, potem zdecyduj</div>
+        <h2>Krótki film, który porządkuje dylemat: z winą czy bez?</h2>
+        <p>
+          W tym miejscu możesz wstawić nagranie 1920×1080, w którym pokazujesz,
+          czym różnią się ścieżki i dlaczego nie warto zaczynać od przypadkowego wzoru.
+        </p>
+      </div>
+
+      <div class="video-frame">
+        <div class="video-placeholder">
+          <div>
+            <div class="play-circle">▶</div>
+            <h3>Tu będzie film 1920×1080</h3>
+            <p>
+              Wstaw tu film z YouTube, Vimeo albo własny plik MP4.
+              To idealne miejsce na spokojne wyjaśnienie i pokazanie generatora.
+            </p>
+          </div>
+        </div>
+
+        <!--
+          WARIANT YOUTUBE:
+          1. Usuń div .video-placeholder powyżej.
+          2. Odkomentuj iframe.
+          3. Podmień TWOJ_ID_FILMU.
+
+          <iframe
+            src="https://www.youtube.com/embed/TWOJ_ID_FILMU"
+            title="Rozwód bez orzekania o winie czy z winą"
+            allowfullscreen>
+          </iframe>
+        -->
+
+        <!--
+          WARIANT MP4:
+          1. Usuń div .video-placeholder powyżej.
+          2. Odkomentuj video.
+          3. Wgraj film-rozwodowyplan.mp4 do tego samego folderu co index.html.
+
+          <video controls poster="miniatura-filmu.jpg">
+            <source src="film-rozwodowyplan.mp4" type="video/mp4">
+            Twoja przeglądarka nie obsługuje odtwarzania filmu.
+          </video>
+        -->
+      </div>
+    </section>
+
+    <!-- DYLEMAT: dwie ścieżki opisane językiem serca i rozsądku -->
+    <section class="container section" id="dylemat">
+      <div class="section-head">
+        <div class="section-kicker">Nie chodzi tylko o formularz</div>
+        <h2>Ten wybór często dotyka czegoś głębszego niż sam pozew.</h2>
+        <p>
+          Jedna osoba chce już tylko spokoju. Druga boi się, że jeśli nie nazwie winy,
+          jej historia zostanie zamieciona pod dywan. Dlatego najpierw warto zobaczyć,
+          w jakiej sytuacji naprawdę jesteś.
+        </p>
+      </div>
+
+      <div class="dilemma-grid">
+        <article class="dilemma-card">
+          <h3>Rozwód bez orzekania o winie może być wart rozważenia, gdy…</h3>
+
+          <p>
+            Nie chcecie prowadzić wojny o przeszłość i potraficie uzgodnić najważniejsze
+            sprawy. To nie znaczy, że rozstanie jest łatwe. To znaczy, że można próbować
+            przejść przez nie spokojniej.
+          </p>
+
+          <ul class="bullet-list">
+            <li><span class="icon">✓</span><span>oboje chcecie rozwodu,</span></li>
+            <li><span class="icon">✓</span><span>nie chcecie udowadniać winy,</span></li>
+            <li><span class="icon">✓</span><span>potraficie rozmawiać o dzieciach,</span></li>
+            <li><span class="icon">✓</span><span>macie podobne stanowisko w sprawie alimentów,</span></li>
+            <li><span class="icon">✓</span><span>zależy Wam na ograniczeniu konfliktu, kosztów i stresu.</span></li>
+          </ul>
+        </article>
+
+        <article class="dilemma-card wine">
+          <h3>Dokładniejsza analiza jest potrzebna, gdy…</h3>
+
+          <p>
+            W tle jest krzywda, przemoc, nacisk, ukrywanie dochodów albo spór o dzieci.
+            Wtedy zbyt szybka decyzja o „spokojnej ścieżce” może nie chronić tego,
+            co dla Ciebie ważne.
+          </p>
+
+          <ul class="bullet-list bullet-alert">
+            <li><span class="icon">!</span><span>była przemoc, groźby albo silna presja,</span></li>
+            <li><span class="icon">!</span><span>boisz się o bezpieczeństwo swoje lub dzieci,</span></li>
+            <li><span class="icon">!</span><span>jest spór o opiekę, kontakty albo alimenty,</span></li>
+            <li><span class="icon">!</span><span>druga osoba ukrywa majątek lub dochody,</span></li>
+            <li><span class="icon">!</span><span>czujesz, że rezygnacja z winy byłaby dla Ciebie zbyt dużym kosztem.</span></li>
+          </ul>
+        </article>
+      </div>
+
+      <div class="bridge-box">
+        <h3>Dlatego ten landing nie zaczyna od: „kup dokument”.</h3>
+        <p>
+          Najpierw pomaga Ci rozpoznać sytuację. Dopiero potem prowadzi do przygotowania
+          pozwu — bez udawania, że każda sprawa rozwodowa jest taka sama.
+        </p>
+      </div>
+    </section>
+
+    <!-- TEST: główny element konwersji -->
+    <section class="container quiz-section" id="test">
+      <div class="quiz-shell">
+        <div class="quiz-layout">
+
+          <aside class="quiz-side">
+            <div class="section-kicker">Test orientacyjny</div>
+
+            <h2>Odpowiedz na 6 pytań.</h2>
+
+            <p>
+              Nie musisz znać przepisów. Odpowiedz spokojnie na pytania o zgodę,
+              rozmowę, dzieci, alimenty i bezpieczeństwo. Na końcu zobaczysz,
+              która ścieżka wymaga rozważenia.
+            </p>
+
+            <ul class="quiz-mini-list">
+              <li>✓ bez rejestracji</li>
+              <li>✓ wynik od razu na stronie</li>
+              <li>✓ ostrożny język w trudnych sytuacjach</li>
+              <li>✓ przejście do generatora pozwu</li>
+            </ul>
+          </aside>
+
+          <div class="quiz-main">
+            <div class="progress-row">
+              <span>Pytanie <span id="currentQuestion">1</span>/6</span>
+              <span id="progressText">Start</span>
+            </div>
+
+            <div class="progress-bar">
+              <div class="progress-fill" id="progressFill"></div>
+            </div>
+
+            <div class="question-card">
+              <h3 id="questionText"></h3>
+
+              <div class="answer-grid">
+                <button class="answer-btn" type="button" data-value="yes">
+                  <strong>Tak</strong>
+                  <span>To zdanie raczej opisuje moją sytuację.</span>
+                </button>
+
+                <button class="answer-btn" type="button" data-value="unclear">
+                  <strong>Nie wiem / to zależy</strong>
+                  <span>Nie mam pewności albo sytuacja jest niejednoznaczna.</span>
+                </button>
+
+                <button class="answer-btn" type="button" data-value="no">
+                  <strong>Nie</strong>
+                  <span>To zdanie raczej nie opisuje mojej sytuacji.</span>
+                </button>
+              </div>
+            </div>
+
+            <div class="quiz-actions">
+              <button class="button button-secondary" id="prevBtn" type="button">
+                ← Wróć
+              </button>
+
+              <button class="button button-gold" id="nextBtn" type="button">
+                Dalej →
+              </button>
+            </div>
+
+            <div class="result-box" id="resultBox">
+              <h3 id="resultTitle"></h3>
+              <p id="resultText"></p>
+
+              <div class="result-note" id="resultNote"></div>
+
+              <div class="result-actions">
+                <a class="button button-primary" id="resultMainCta" href="https://rozwodowyplan.pl/generator">
+                  Przejdź do generatora
+                </a>
+
+                <button class="button button-secondary" id="restartBtn" type="button">
+                  Zrób test jeszcze raz
+                </button>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- JAK TO DZIAŁA: wzmacnia zaufanie i tłumaczy proces -->
+    <section class="container section">
+      <div class="section-head center">
+        <div class="section-kicker">Po teście</div>
+        <h2>Co dalej?</h2>
+        <p>
+          RozwodowyPlan prowadzi przez przygotowanie dokumentu krok po kroku,
+          aby użytkownik nie zaczynał od pustej kartki ani przypadkowego wzoru.
+        </p>
+      </div>
+
+      <div class="steps-grid">
+        <div class="step-card">
+          <div class="step-number">1</div>
+          <h3>Rozpoznajesz ścieżkę</h3>
+          <p>
+            Test pomaga zobaczyć, czy sprawa wygląda na spokojniejszą,
+            czy wymaga większej ostrożności.
+          </p>
+        </div>
+
+        <div class="step-card">
+          <div class="step-number">2</div>
+          <h3>Porządkujesz fakty</h3>
+          <p>
+            Zbierasz informacje o dzieciach, alimentach, kontaktach,
+            majątku i najważniejszych okolicznościach.
+          </p>
+        </div>
+
+        <div class="step-card">
+          <div class="step-number">3</div>
+          <h3>Przygotowujesz pozew</h3>
+          <p>
+            Generator pomaga przejść przez strukturę pisma i dopasować je
+            do odpowiedzi użytkownika.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- KOŃCOWE CTA -->
+    <section class="container section">
+      <div class="final-cta">
+        <h2>Nie wybieraj pozwu w panice.</h2>
+
+        <p>
+          Zacznij od spokojnego rozpoznania sytuacji. Zobacz, czy bliżej Ci
+          do ścieżki porozumienia, czy potrzebujesz dokładniejszego przygotowania
+          i ochrony swoich interesów.
+        </p>
+
+        <a class="button button-gold" href="#test">
+          Zrób test i sprawdź ścieżkę →
+        </a>
+      </div>
+    </section>
+
+    <!-- NOTA PRAWNA: konieczna przy takim narzędziu -->
+    <div class="legal-note">
+      RozwodowyPlan.pl pomaga uporządkować informacje i przygotować dokumenty.
+      Nie zastępuje indywidualnej porady adwokata ani radcy prawnego.
+      W sprawach dotyczących przemocy, bezpieczeństwa dzieci, skomplikowanego majątku,
+      alimentów lub silnego konfliktu warto skonsultować sytuację z profesjonalnym pełnomocnikiem.
+    </div>
+
+    <footer>
+      © 2026 RozwodowyPlan.pl — spokojniejsze przygotowanie do trudnych decyzji.
+    </footer>
+  </main>
+
+  <script>
+    /*
+      TEST: "ROZWÓD BEZ WINY CZY Z WINĄ?"
+
+      Założenie marketingowe:
+      - użytkownik nie dostaje suchej porady prawnej;
+      - najpierw czuje, że jego dylemat jest zrozumiany;
+      - wynik nie obiecuje rozstrzygnięcia, tylko pokazuje kierunek do rozważenia.
+
+      Logika:
+      - pytania 1-5 badają zgodę, komunikację, dzieci i alimenty;
+      - pytanie 6 bada bezpieczeństwo;
+      - jeśli przy bezpieczeństwie nie ma jasnego "tak", wynik jest ostrożny;
+      - wiele odpowiedzi "tak" daje ścieżkę bez orzekania o winie;
+      - odpowiedzi mieszane dają wynik pośredni.
+    */
+
+    const questions = [
+      "Czy oboje chcecie rozwodu i zgadzacie się, że małżeństwo definitywnie się rozpadło?",
+      "Czy nie chcecie prowadzić sporu o to, kto ponosi winę za rozpad małżeństwa?",
+      "Czy potraficie rozmawiać o najważniejszych sprawach bez ciągłych gróźb, szantażu lub eskalacji?",
+      "Czy macie wspólne albo zbliżone stanowisko dotyczące dzieci, opieki i kontaktów?",
+      "Czy jesteście w stanie ustalić alimenty albo przynajmniej spokojnie rozmawiać o ich wysokości?",
+      "Czy w relacji nie ma przemocy, gróźb ani poważnego zagrożenia dla Ciebie lub dzieci?"
+    ];
+
+    let currentIndex = 0;
+    let answers = Array(questions.length).fill(null);
+
+    const questionText = document.getElementById("questionText");
+    const currentQuestion = document.getElementById("currentQuestion");
+    const progressText = document.getElementById("progressText");
+    const progressFill = document.getElementById("progressFill");
+    const answerButtons = document.querySelectorAll(".answer-btn");
+    const prevBtn = document.getElementById("prevBtn");
+    const nextBtn = document.getElementById("nextBtn");
+    const resultBox = document.getElementById("resultBox");
+    const resultTitle = document.getElementById("resultTitle");
+    const resultText = document.getElementById("resultText");
+    const resultNote = document.getElementById("resultNote");
+    const resultMainCta = document.getElementById("resultMainCta");
+    const restartBtn = document.getElementById("restartBtn");
+
+    function renderQuestion() {
+      questionText.textContent = questions[currentIndex];
+      currentQuestion.textContent = currentIndex + 1;
+
+      const progress = ((currentIndex + 1) / questions.length) * 100;
+      progressFill.style.width = progress + "%";
+      progressText.textContent = Math.round(progress) + "%";
+
+      answerButtons.forEach((button) => {
+        button.classList.remove("active");
+
+        if (answers[currentIndex] === button.dataset.value) {
+          button.classList.add("active");
+        }
+      });
+
+      prevBtn.style.visibility = currentIndex === 0 ? "hidden" : "visible";
+      nextBtn.textContent = currentIndex === questions.length - 1 ? "Pokaż wynik →" : "Dalej →";
+    }
+
+    answerButtons.forEach((button) => {
+      button.addEventListener("click", () => {
+        answers[currentIndex] = button.dataset.value;
+
+        answerButtons.forEach((btn) => btn.classList.remove("active"));
+        button.classList.add("active");
+      });
+    });
+
+    nextBtn.addEventListener("click", () => {
+      if (!answers[currentIndex]) {
+        alert("Zaznacz odpowiedź, aby przejść dalej.");
+        return;
+      }
+
+      if (currentIndex < questions.length - 1) {
+        currentIndex++;
+        renderQuestion();
+      } else {
+        showResult();
+      }
+    });
+
+    prevBtn.addEventListener("click", () => {
+      if (currentIndex > 0) {
+        currentIndex--;
+        renderQuestion();
+      }
+    });
+
+    restartBtn.addEventListener("click", () => {
+      currentIndex = 0;
+      answers = Array(questions.length).fill(null);
+      resultBox.classList.remove("visible");
+      renderQuestion();
+      document.getElementById("test").scrollIntoView({ behavior: "smooth" });
+    });
+
+    function showResult() {
+      const yesCount = answers.filter((answer) => answer === "yes").length;
+      const unclearCount = answers.filter((answer) => answer === "unclear").length;
+      const noCount = answers.filter((answer) => answer === "no").length;
+      const safetyAnswer = answers[5];
+
+      /*
+        Wynik ostrożny:
+        Jeżeli pytanie o bezpieczeństwo nie ma odpowiedzi "tak",
+        nie sugerujemy prostej ścieżki bez orzekania o winie.
+      */
+      if (safetyAnswer !== "yes") {
+        resultTitle.textContent = "Najpierw bezpieczeństwo i dokładna analiza.";
+        resultText.textContent =
+          "Twoje odpowiedzi wskazują, że sprawa może wymagać szczególnej ostrożności. Jeśli pojawia się przemoc, groźby, silna presja albo zagrożenie dla dzieci, nie warto wybierać rodzaju pozwu automatycznie.";
+
+        resultNote.textContent =
+          "W takiej sytuacji rozważ konsultację z prawnikiem lub specjalistą od przemocy. Generator może pomóc uporządkować fakty, ale nie powinien zastępować indywidualnej pomocy.";
+
+        resultMainCta.href = "https://rozwodowyplan.pl/generator";
+        resultMainCta.textContent = "Uporządkuj sytuację w generatorze";
+      }
+
+      /*
+        Wynik spokojniejszy:
+        Dużo odpowiedzi "tak" sugeruje, że rozwód bez orzekania o winie
+        może być kierunkiem wartym rozważenia.
+      */
+      else if (yesCount >= 5 && noCount === 0) {
+        resultTitle.textContent = "Rozwód bez orzekania o winie może być wart rozważenia.";
+        resultText.textContent =
+          "Wygląda na to, że macie przestrzeń do spokojniejszej ścieżki: bez prowadzenia sporu o winę, z próbą uporządkowania dzieci, alimentów i najważniejszych ustaleń.";
+
+        resultNote.textContent =
+          "To nie oznacza, że sprawa jest łatwa. Oznacza, że możesz zacząć od przygotowania pozwu w formule bez orzekania o winie i sprawdzić, jakie informacje będą potrzebne.";
+
+        resultMainCta.href = "https://rozwodowyplan.pl/generator";
+        resultMainCta.textContent = "Przygotuj pozew bez orzekania o winie";
+      }
+
+      /*
+        Wynik mieszany:
+        Użytkownik może chcieć spokojnej ścieżki, ale ma za dużo niewiadomych.
+      */
+      else if (unclearCount >= 2 || yesCount >= 3) {
+        resultTitle.textContent = "Jesteś pomiędzy: warto najpierw uporządkować punkty sporne.";
+        resultText.textContent =
+          "Część odpowiedzi wskazuje na możliwość spokojniejszej drogi, ale są też obszary niepewności. To często oznacza, że zanim wybierzesz rodzaj pozwu, warto doprecyzować dzieci, alimenty, kontakty albo opis sytuacji.";
+
+        resultNote.textContent =
+          "Nie musisz od razu rozstrzygać wszystkiego. Zacznij od zebrania informacji i zobacz, które elementy pozwu będą najważniejsze.";
+
+        resultMainCta.href = "https://rozwodowyplan.pl/generator";
+        resultMainCta.textContent = "Sprawdź, co wpisać w pozwie";
+      }
+
+      /*
+        Wynik trudniejszy:
+        Większość odpowiedzi "nie" wskazuje, że prosta ścieżka może być ryzykowna.
+      */
+      else {
+        resultTitle.textContent = "Prosta ścieżka bez winy może nie wystarczyć.";
+        resultText.textContent =
+          "Twoje odpowiedzi sugerują, że sprawa może być konfliktowa albo wymagać dokładniejszego opisania okoliczności. W takiej sytuacji warto ostrożnie rozważyć, czy rezygnacja z orzekania o winie jest dla Ciebie właściwa.";
+
+        resultNote.textContent =
+          "Generator może pomóc uporządkować fakty i przygotować dokument, ale przy silnym konflikcie dobrze rozważyć także indywidualną poradę prawną.";
+
+        resultMainCta.href = "https://rozwodowyplan.pl/generator";
+        resultMainCta.textContent = "Przygotuj się do trudniejszej sprawy";
+      }
+
+      resultBox.classList.add("visible");
+      resultBox.scrollIntoView({ behavior: "smooth", block: "center" });
+    }
+
+    renderQuestion();
+  </script>
+</body>
+</html>
